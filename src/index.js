@@ -13,16 +13,16 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('public', path.join(__dirname, 'public'));
 app.engine('html', require('ejs').renderFile); //usar archivos html usando ejs
 
-/*middlewares
+//middlewares
 app.use(morgan('dev'));
 app.use(myConnection(mysql, {
     host: 'localhost',
     user: 'root', 
     password: '',
     port: 3306,
-    database: 'database_petshoptest'
+    database: 'StyleU'
 }, 'single' ));
-*/
+
 
 //Para entender datos de los formularios
 app.use(express.urlencoded({extended:false}));
