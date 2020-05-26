@@ -23,3 +23,6 @@ router.get('/continuar.html', continuarController.list);
 
 const enviadoController = require('../controllers/enviadoController'); 
 router.get('/enviado.html', enviadoController.list); 
+
+const promoController = require('../controllers/promoController'); 
+router.get('/promo.html', promoController.list); 
