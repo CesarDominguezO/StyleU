@@ -21,7 +21,6 @@ router.get('/regaloof.html', regaloofController.list);
 const continuarController = require('../controllers/continuarController');
 router.get('/continuar.html', continuarController.list);
 
-
 const enviadoController = require('../controllers/enviadoController');
 router.get('/enviado.html', enviadoController.list);
 
@@ -33,9 +32,6 @@ router.get('/test1.html', test1Controller.list);
 
 const test2Controller = require('../controllers/test2Controller');
 router.get('/test2.html', test2Controller.list);
-
-const test3Controller = require('../controllers/test3Controller');
-router.get('/test3.html', test3Controller.list);
 
 const test3Controller = require('../controllers/test3Controller');
 router.get('/test3.html', test3Controller.list);
@@ -57,9 +53,3 @@ router.get('/test8.html', test8Controller.list);
 
 const test9Controller = require('../controllers/test9Controller');
 router.get('/test9.html', test9Controller.list);
-
-const enviadoController = require('../controllers/enviadoController'); 
-router.get('/enviado.html', enviadoController.list); 
-
-const promoController = require('../controllers/promoController'); 
-router.get('/promo.html', promoController.list); 
