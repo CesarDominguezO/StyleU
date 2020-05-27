@@ -29,6 +29,7 @@ router.get('/promo.html', promoController.list);
 
 const test1Controller = require('../controllers/test1Controller');
 router.get('/test1.html', test1Controller.list);
+router.post('/add', test1Controller.save);
 
 const test2Controller = require('../controllers/test2Controller');
 router.get('/test2.html', test2Controller.list);
