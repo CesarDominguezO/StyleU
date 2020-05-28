@@ -54,3 +54,6 @@ router.get('/test8.html', test8Controller.list);
 
 const test9Controller = require('../controllers/test9Controller');
 router.get('/test9.html', test9Controller.list);
+
+const registroController = require('../controllers/registroController');
+router.get('/registro.html', registroController.list);
