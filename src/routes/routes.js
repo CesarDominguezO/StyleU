@@ -37,27 +37,28 @@ router.post('/test3/save', test3Controller.test);
 
 const test4Controller = require('../controllers/test4Controller');
 router.get('/test4.html', test4Controller.list);
-router.post('/test4/save', test3Controller.test);
+router.post('/test4/save', test4Controller.test);
 
 const test5Controller = require('../controllers/test5Controller');
 router.get('/test5.html', test5Controller.list);
-router.post('/test5/save', test3Controller.test);
+router.post('/test5/save', test5Controller.test);
 
 const test6Controller = require('../controllers/test6Controller');
 router.get('/test6.html', test6Controller.list);
-router.post('/test6/save', test3Controller.test);
+router.post('/test6/save', test6Controller.test);
 
 const test7Controller = require('../controllers/test7Controller');
 router.get('/test7.html', test7Controller.list);
-router.post('/test7/save', test3Controller.test);
+router.post('/test7/save', test7Controller.test);
 
 const test8Controller = require('../controllers/test8Controller');
 router.get('/test8.html', test8Controller.list);
-router.post('/test8/save', test3Controller.test);
+router.post('/test8/save', test8Controller.test);
 
 const test9Controller = require('../controllers/test9Controller');
 router.get('/test9.html', test9Controller.list);
-router.post('/test9/save', test3Controller.test);
+router.post('/test9/save', test9Controller.test);
 
 const registroController = require('../controllers/registroController');
 router.get('/registro.html', registroController.list);
+router.post('/reg/save', registroController.reg);

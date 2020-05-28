@@ -3,7 +3,7 @@
   <div class="limiter">
     <div class="container-login100">
       <div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
-        <form class="login100-form validate-form flex-sb flex-w">
+        <form class="login100-form validate-form flex-sb flex-w" action="/reg/save" method="post">
           <span class="login100-form-title p-b-53">
             CREAR CUENTA
           </span>
@@ -33,7 +33,7 @@
             </span>
           </div>
           <div class="wrap-input100 validate-input" data-validate = "El correo es obligatorio">
-            <input class="input100" type="text" name="correo" >
+            <input class="input100" type="text" name="email" >
             <span class="focus-input100"></span>
           </div>
 
@@ -43,7 +43,7 @@
             </span>
           </div>
           <div class="wrap-input100 validate-input" data-validate = "La contraseña es obligatoria">
-            <input class="input100" type="password" name="pass" >
+            <input class="input100" type="password" name="contra" >
             <span class="focus-input100"></span>
           </div>
           <div class="p-t-13 p-b-9">
@@ -52,12 +52,12 @@
             </span>
           </div>
           <div class="wrap-input100 validate-input" data-validate = "Confirma tu contraseña">
-            <input class="input100" type="password" name="pass" >
+            <input class="input100" type="password">
             <span class="focus-input100"></span>
           </div>
 
           <div class="container-login100-form-btn m-t-17">
-            <button class="login100-form-btn">
+            <button class="login100-form-btn" type="submit">
               Crear cuenta
             </button>
           </div>
