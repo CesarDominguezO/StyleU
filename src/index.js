@@ -8,7 +8,17 @@ const app = express();
 //https://www.npmjs.com/package/express-session
 const session = require('express-session');
 //https://www.npmjs.com/package/express-mysql-session
-const MySQLStore = require('express-mysql-session')(session);
+const MySQLTest = require('express-mysql-session')(session);
+
+const dbCon={
+    host: 'localhost',
+    user: 'root', 
+    password: '',
+    port: 3306,
+    database: 'StyleU'
+}
+
+const sessionTest = new MySQLTest(dbCon);
 
 //settings
 app.set('port', process.env.PORT || 3000);
@@ -19,13 +29,7 @@ app.engine('html', require('ejs').renderFile); //usar archivos html usando ejs
 
 //middlewares
 app.use(morgan('dev'));
-app.use(myConnection(mysql, {
-    host: 'localhost',
-    user: 'root', 
-    password: '',
-    port: 3306,
-    database: 'StyleU'
-}, 'single' ));
+app.use(myConnection(mysql, dbCon, 'single'));
 
 
 //Para entender datos de los formularios
