@@ -10,7 +10,8 @@ controller.list = (req, res) =>{
 controller.save = (req, res) =>{
     const data =req.body;
     req.getConnection((err, conn) =>{
-        conn.query('INSERT INTO test set ?', [data], (err, test) =>{
+        var query=conn.query('INSERT INTO test set ?', [data], (err, test) =>{
+            console.log(query.sql);
             if(err){
                 res.json(err);
             }

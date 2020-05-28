@@ -66,12 +66,11 @@ CREATE TABLE COMPRAN(
 ALTER TABLE COMPRAN ADD UNIQUE INDEX(idc);
 
 CREATE TABLE TEST(
-    ide CHAR(8) NOT NULL,
-    email VARCHAR(30) NOT NULL,
     altura CHAR (3) NOT NULL,
     peso CHAR (3) NOT NULL,
     tallap CHAR (2) NOT NULL,
     tallac CHAR (3) NOT NULL,
+    tallaz CHAR (2) NOT NULL,
     pantalonc VARCHAR (5),
     hombro CHAR (3),
     busto CHAR (3),
@@ -93,7 +92,7 @@ CREATE TABLE TEST(
     noche VARCHAR (2) NOT NULL,
     precio CHAR (4) NOT NULL,
     tiempo CHAR (2) NOT NULL,
-    PRIMARY KEY (ide, email, tallac),
-    FOREIGN KEY (email) REFERENCES USUARIO(email),
-    FOREIGN KEY (ide) REFERENCES ESTILISTA(ide),
+    idt CHAR (8) NOT NULL,
+    PRIMARY KEY (idt)
 );
+ALTER TABLE TEST ADD UNIQUE INDEX(idt);
