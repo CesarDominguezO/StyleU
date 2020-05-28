@@ -5,6 +5,10 @@ const myConnection = require('express-myconnection');
 const path =require ('path');
 
 const app = express();
+//https://www.npmjs.com/package/express-session
+const session = require('express-session');
+//https://www.npmjs.com/package/express-mysql-session
+const MySQLStore = require('express-mysql-session')(session);
 
 //settings
 app.set('port', process.env.PORT || 3000);
