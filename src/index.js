@@ -30,7 +30,17 @@ app.engine('html', require('ejs').renderFile); //usar archivos html usando ejs
 //middlewares
 app.use(morgan('dev'));
 app.use(myConnection(mysql, dbCon, 'single'));
-
+app.use(session({
+    secret: 's3cur3',
+    store: sessionTest,
+    resave: false,
+    saveUninitialized: true //true para empezar a guardar información
+}));
+app.use(function(req, res, next) {
+    res.locals.test = req.session.test; //utilizar la información del carrito en toda la navegación
+    console.log(res.locals.test)
+    next();
+  });
 
 //Para entender datos de los formularios
 app.use(express.urlencoded({extended:false}));
@@ -41,7 +51,6 @@ app.use(require('./routes/routes'));
 
 //static files
 app.use(express.static(path.join(__dirname,'public')))
-
 
 app.listen (app.get('port'),() => {
     console.log('server on port');
