@@ -1,0 +1,108 @@
+<%- include('partials/_header') -%>
+<body>
+
+  <section id="new">
+      <form action="/test/save" method="post">
+      <p style="margin-top: 20px">Para asegurarnos de que los artículos que le enviemos sean de su medida y gusto, necesitamos que usted nos brinde la siguiente información (por favor sea lo más preciso posible)</p>
+     <br>
+      <p>Seleccione el tipo de medida que está acustromado a usar</p>
+      <select name="medida" class="selectpicker" style="padding: 8px;font-size: 20px; font: Raleway; background-color: #3f3f40; color: #f5f6f7; ">
+            <option value="MX">Mexicano</option>
+            <option value="US">Estadounidense</option>
+            </select>
+      <br>
+      <input type="text" name="altura" style="background-color: #f5f6f7; color: #3f3f40; border: 0.5px solid #3f3f40; margin-bottom: 20px;" placeholder="Altura">
+      <br>
+      <input type="text" name="peso" style="background-color: #f5f6f7; color: #3f3f40; border: 0.5px solid #3f3f40; margin-bottom: 20px;" placeholder="Peso">
+          <br>
+      <input type="text" name="tallaz" style="background-color: #f5f6f7; color: #3f3f40; border: 0.5px solid #3f3f40; margin-bottom: 20px;" placeholder="Talla de Zapato">
+              <br>
+      <div class="form-group">
+            <p>Talla de Camisa:</p>
+      <select name="tallac" class="selectpicker" style="padding: 8px;font-size: 20px; font: Raleway; background-color: #3f3f40; color: #f5f6f7; ">
+            <option>XXS</option>
+            <option>XS</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+            <option>XXL</option>
+      </select>
+      </div>
+      <br>
+      <div class="form-group">
+            <p>Talla de Pantalón:</p>
+      <select name="tallap" class="selectpicker" style="padding: 8px;font-size: 20px; font: Raleway; background-color: #3f3f40; color: #f5f6f7; ">
+            <option>00</option>
+            <option>0</option>
+            <option>2</option>
+            <option>4</option>
+            <option>6</option>
+            <option>8</option>
+            <option>10</option>
+            <option>12</option>
+            <option>14</option>
+            <option>16</option>
+            <option>18</option>
+            <option>20</option>
+            <option>22</option>
+      </select>
+      </div>
+      <br>
+      <p>A continuación, use una cinta métrica para medir lo que se le indica (campos no obligatorios)</p>
+      <br>
+      <input type="text" name="hombro" style="background-color: #f5f6f7; color: #3f3f40; border: 0.5px solid #3f3f40; margin-bottom: 20px;" placeholder="Hombro">
+      <br>
+      <input type="text" name="busto" style="background-color: #f5f6f7; color: #3f3f40; border: 0.5px solid #3f3f40; margin-bottom: 20px;" placeholder="Busto">
+      <br>
+      <input type="text" name="cintura" style="background-color: #f5f6f7; color: #3f3f40; border: 0.5px solid #3f3f40; margin-bottom: 20px;" placeholder="Cintura">
+      <br>
+      <input type="text" name="cadera" style="background-color: #f5f6f7; color: #3f3f40; border: 0.5px solid #3f3f40; margin-bottom: 20px;" placeholder="Cadera">
+      <br>
+      <!--<p style="margin-top: 20px;">De estas imágenes, la que mejor me describe es</p>
+      <div class="container-fluid">
+<div id="picker3" class="form-group">
+  <div id="image1" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
+    <input type="image" name="cuerpo" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button" value="reloj">
+      <br>
+      <p style="font-size: 17px;">Reloj de arena</p>
+  </div>
+  <div id="image2" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
+    <input type="image" name="cuerpo" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button" value="relojs">
+      <br>
+      <p style="font-size: 17px;">Reloj superior</p>
+  </div>
+  <div id="image3" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
+    <input type="image" name="cuerpo" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button" value="cuchara">
+      <br>
+      <p style="font-size: 17px;">Cuchara</p>
+  </div>
+        <div id="image4" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
+    <input type="image" name="cuerpo" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button" value="pera">
+      <br>
+      <p style="font-size: 17px;">Pera</p>
+  </div>
+        <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
+    <input type="image" name="cuerpo" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button" value="triangulo">
+      <br>
+      <p style="font-size: 17px;">Triángulo invertido</p>
+  </div>
+        <div id="image6" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
+    <input type="image" name="cuerpo" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button" value="manzana">
+      <br>
+      <p style="font-size: 17px;">Manzana</p>
+  </div>
+        <div id="image7" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
+   <input type="image" name="cuerpo" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button" value="rectangulo">
+      <br>
+      <p style="font-size: 17px;">Rectángulo</p>
+  </div>
+</div>-->
+</div>
+<br>
+      <button type="submit" value="Continuar" style="margin-bottom: 30px; font-weight:500; padding: 5px;">Continuar</button>
+          </form>
+  </section>
+  </body>
+<%- include('partials/_footer') -%>
+</html>

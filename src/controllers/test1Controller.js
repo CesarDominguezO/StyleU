@@ -12,7 +12,7 @@ controller.test = (req, res) =>{
     var test1= req.body;
     req.session.test=test1;
     console.log(req.session.test);
-    res.redirect('/test3.html');
+    res.redirect('/continuar.html');
 }
 
 
