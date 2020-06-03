@@ -1,1098 +1,1280 @@
 <%- include('partials/_header') -%>
-<body>
-<div class="px-4 px-lg-0 my-5">
-<ul class="nav nav-tabs nav-justified md-tabs indigo" id="myTabJust" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link active" id="medida-tab-just" data-toggle="tab" href="#medida-just" role="tab" aria-controls="medida-just"
-      aria-selected="true">Medidas</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="oseo-tab-just" data-toggle="tab" href="#oseo-just" role="tab" aria-controls="oseo-just"
-      aria-selected="false">Estructura ósea</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="cuerpo-tab-just" data-toggle="tab" href="#cuerpo-just" role="tab" aria-controls="cuerpo-just"
-      aria-selected="false">Físico</a>
-  </li>
+<body style="background-color: #f5f6f7">
+  <div class="px-4 px-lg-0 my-5">
+  <ul class="nav nav-tabs nav-justified md-tabs indigo" id="myTabJust" role="tablist">
     <li class="nav-item">
-    <a class="nav-link" id="rasgo-tab-just" data-toggle="tab" href="#rasgo-just" role="tab" aria-controls="rasgo-just"
-      aria-selected="false">Rasgos faciales</a>
-  </li>
-     <li class="nav-item">
-    <a class="nav-link" id="piel-tab-just" data-toggle="tab" href="#piel-just" role="tab" aria-controls="piel-just"
-      aria-selected="false">Tono de piel</a>
-  </li>
-     <li class="nav-item">
-    <a class="nav-link" id="gusto-tab-just" data-toggle="tab" href="#gusto-just" role="tab" aria-controls="gusto-just"
-      aria-selected="false">Gustos</a>
-  </li>
-     <li class="nav-item">
-    <a class="nav-link" id="costo-tab-just" data-toggle="tab" href="#costo-just" role="tab" aria-controls="costo-just"
-      aria-selected="false">Costos</a>
-  </li>
-</ul>
-<form id="saveForm" action="/test/save" method="post">
-<div class="tab-content card pt-5" id="myTabContentJust" style="background-color: #f5f6f7">
-  <div class="tab-pane fade show active" id="medida-just" role="tabpanel" aria-labelledby="medida-tab-just" style="padding: 50px; padding-top: 0px;">
-   <p style="margin-top: 20px">Para asegurarnos de que los artículos que le enviemos sean de su medida y gusto, necesitamos que usted nos brinde la siguiente información (por favor sea lo más preciso posible)</p>
-     <br>
-      <a style="padding-right: 10px;">Seleccione el tipo de medida que está acustromado a usar:</a>
-      <select class="selectpicker" style="padding: 8px;font-size: 20px; font: Raleway; background-color: #3f3f40; color: #f5f6f7; ">
-            <option>Mexicano</option>
-            <option>Estadounidense</option>
-            </select>
-      <br>
-      <input type="text" name="altura" style="background-color: #f5f6f7; color: #3f3f40; border: 0.5px solid #3f3f40; margin-bottom: 20px;" placeholder="Altura">
-      <br>
-      <input type="text" name="peso" style="background-color: #f5f6f7; color: #3f3f40; border: 0.5px solid #3f3f40; margin-bottom: 20px;" placeholder="Peso">
+      <a class="nav-link active" id="medida-tab-just" data-toggle="tab" href="#medida-just" role="tab" aria-controls="medida-just"
+        aria-selected="true">Medidas</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="oseo-tab-just" data-toggle="tab" href="#oseo-just" role="tab" aria-controls="oseo-just"
+        aria-selected="false">Estructura ósea</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="cuerpo-tab-just" data-toggle="tab" href="#cuerpo-just" role="tab" aria-controls="cuerpo-just"
+        aria-selected="false">Físico</a>
+    </li>
+      <li class="nav-item">
+      <a class="nav-link" id="rasgo-tab-just" data-toggle="tab" href="#rasgo-just" role="tab" aria-controls="rasgo-just"
+        aria-selected="false">Rasgos faciales</a>
+    </li>
+       <li class="nav-item">
+      <a class="nav-link" id="piel-tab-just" data-toggle="tab" href="#piel-just" role="tab" aria-controls="piel-just"
+        aria-selected="false">Tono de piel</a>
+    </li>
+       <li class="nav-item">
+      <a class="nav-link" id="gusto-tab-just" data-toggle="tab" href="#gusto-just" role="tab" aria-controls="gusto-just"
+        aria-selected="false">Gustos</a>
+    </li>
+       <li class="nav-item">
+      <a class="nav-link" id="costo-tab-just" data-toggle="tab" href="#costo-just" role="tab" aria-controls="costo-just"
+        aria-selected="false">Costos</a>
+    </li>
+  </ul>
+  <form id="saveForm" action="/test/save" method="post">
+  <div class="tab-content card pt-5" id="myTabContentJust" style="background-color: #f5f6f7">
+    <div class="tab-pane fade show active" id="medida-just" role="tabpanel" aria-labelledby="medida-tab-just" style="padding: 50px; padding-top: 0px;">
+     <p style="margin-top: 20px">Para asegurarnos de que los artículos que le enviemos sean de su medida y gusto, necesitamos que usted nos brinde la siguiente información (por favor sea lo más preciso posible)</p>
+       <br>
+        <a style="padding-right: 10px;">Seleccione el tipo de medida que está acustromado a usar:</a>
+        <select class="selectpicker" style="padding: 8px;font-size: 20px; font: Raleway; background-color: #3f3f40; color: #f5f6f7; ">
+              <option>Mexicano</option>
+              <option>Estadounidense</option>
+              </select>
+        <br>
+        <input type="text" name="altura" style="background-color: #f5f6f7; color: #3f3f40; border: 0.5px solid #3f3f40; margin-bottom: 20px;" placeholder="Altura">
+        <br>
+        <input type="text" name="peso" style="background-color: #f5f6f7; color: #3f3f40; border: 0.5px solid #3f3f40; margin-bottom: 20px;" placeholder="Peso">
+            <br>
+        <input type="text" name="tallaz" style="background-color: #f5f6f7; color: #3f3f40; border: 0.5px solid #3f3f40; margin-bottom: 20px;" placeholder="Talla de Zapato">
+                <br>
+        <div class="form-group">
+              <a style="padding-right: 10px;">Talla de Camisa:</a>
+        <select name="tallac" class="selectpicker" style="padding: 8px;font-size: 20px; font: Raleway; background-color: #3f3f40; color: #f5f6f7; ">
+              <option>XXS</option>
+              <option>XS</option>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+              <option>XL</option>
+              <option>XXL</option>
+        </select>
+        </div>
+        <br>
+        <div class="form-group">
+              <a style="padding-right: 10px;">Talla de Pantalón:</a>
+        <select name="tallap" class="selectpicker" style="padding: 8px;font-size: 20px; font: Raleway; background-color: #3f3f40; color: #f5f6f7; ">
+              <option>00</option>
+              <option>0</option>
+              <option>2</option>
+              <option>4</option>
+              <option>6</option>
+              <option>8</option>
+              <option>10</option>
+              <option>12</option>
+              <option>14</option>
+              <option>16</option>
+              <option>18</option>
+              <option>20</option>
+              <option>22</option>
+        </select>
+        </div>
+        <br>
+        <p>A continuación, use una cinta métrica para medir lo que se le indica (campos no obligatorios)</p>
+        <br>
+        <input type="text" name="hombro" style="background-color: #f5f6f7; color: #3f3f40; border: 0.5px solid #3f3f40; margin-bottom: 20px;" placeholder="Hombro">
+        <br>
+        <input type="text" name="busto" style="background-color: #f5f6f7; color: #3f3f40; border: 0.5px solid #3f3f40; margin-bottom: 20px;" placeholder="Busto">
+        <br>
+        <input type="text" name="cintura" style="background-color: #f5f6f7; color: #3f3f40; border: 0.5px solid #3f3f40; margin-bottom: 20px;" placeholder="Cintura">
+        <br>
+        <input type="text" name="cadera" style="background-color: #f5f6f7; color: #3f3f40; border: 0.5px solid #3f3f40; margin-bottom: 20px;" placeholder="Cadera">
+        <br>
+       <div id="dynamicContentDiv">
+      <div class="form cf">
+        <section class="pregunta1 cf">
+          <p style="margin-top: 20px; font-size: 30px; color: #3f3f40">De estas imágenes, la que mejor me describe es:</p>
+     <div class="container-fluid">
+              <div class="row">
+                  <div id="image2" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="radio" name="cuerpo" id="reloj" value="reloj"><label class="reloj-label four coll" for="reloj" style="background-image: url(imagenes/hourglass.jpg); background-size: 180px; background-repeat: no-repeat; background-position: center center;"></label>
+                  </div>
+          <div id="image2" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+                  <input type="radio" name="cuerpo" id="relojs" value="relojs"><label class="relojs-label four coll" for="relojs" style="background-image: url(imagenes/tophourglass.jpg); background-size: 180px; background-repeat: no-repeat; background-position: center center;"></label>
+                  </div>
+                  <div id="image2" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="radio" name="cuerpo" id="cuchara" value="cuchara"><label class="cuchara-label four coll" for="cuchara" style="background-image: url(imagenes/cuchara.jpg); background-size: 180px; background-repeat: no-repeat; background-position: center center;"></label>
+                  </div>
+                  <div id="image2" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+                  <input type="radio" name="cuerpo" id="pera" value="pera"><label class="pera-label four coll" for="pera" style="background-image: url(imagenes/pera.jpg); background-size: 180px; background-repeat: no-repeat; background-position: center center;"></label>
+                  </div>
+                  <div id="image2" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+                  <input type="radio" name="cuerpo" id="triangulo" value="triangulo"><label class="triangulo-label four coll" for="triangulo" style="background-image: url(imagenes/triangulo.jpg); background-size: 180px; background-repeat: no-repeat; background-position: center center;"></label>
+                  </div>
+                  <div id="image2" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+                  <input type="radio" name="cuerpo" id="manzana" value="manzana"><label class="manzana-label four coll" for="manzana" style="background-image: url(imagenes/manzana.jpg); background-size: 180px; background-repeat: no-repeat; background-position: center center;"></label>
+                  </div>
+                  <div id="image2" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+                  <input type="radio" name="cuerpo" id="rectangulo" value="rectangulo"><label class="rectangulo-label four coll" for="rectangulo" style="background-image: url(imagenes/rectangulo.jpg); background-size: 230px; background-repeat: no-repeat; background-position: center center;"></label>
+                  </div>
+              </div>
+      </div>
+              </section>
+           </div>
+        </div>
+    </div>
+          <div class="tab-pane fade" id="oseo-just" role="tabpanel" aria-labelledby="oseo-tab-just">
+               <p style="margin-top: 20px;">En cuanto a altura:</p>
           <br>
-      <input type="text" name="tallaz" style="background-color: #f5f6f7; color: #3f3f40; border: 0.5px solid #3f3f40; margin-bottom: 20px;" placeholder="Talla de Zapato">
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select1" value="a" onclick="updateTotal();">
+    <p for="x" style="font-size: 17px;">Me veo mucho más baja de lo que soy</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select1" value="b" onclick="updateTotal();">
+    <p for="x" style="font-size: 17px;">Tiendo a verme un poco más baja de lo que soy</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select1" value="c" onclick="updateTotal();">
+    <p for="x" style="font-size: 17px;">Me veo de la estatura que soy</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-l-6">
+    <input type="radio" name="select1" value="d" onclick="updateTotal();">
+    <p for="x" style="font-size: 17px;">Me veo un poco más alta de lo que soy</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select1" value="e" onclick="updateTotal();">
+    <p for="x" style="font-size: 17px;">Me veo un mucho más alta de lo  que soy</p>
+                  </div>
+              </div>
+          </div>
+          <br>
+      <p style="margin-top: 20px;">Mis hombros son:</p>
+          <br>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select2" value="a" onclick="updateTotal();">
+    <p for="x" style="font-size: 17px;">Marcados/ delgados y chicos</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select2" value="b" onclick="updateTotal();">
+    <p for="x" style="font-size: 17px;">Anchos y rectos</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select2" value="c" onclick="updateTotal();">
+    <p for="x" style="font-size: 17px;">Moderados y simétricos</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select2" value="d" onclick="updateTotal();">
+    <p for="x" style="font-size: 17px;">Caídos y un poco marcados/ rectos</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select2" value="e" onclick="updateTotal();">
+    <p for="x" style="font-size: 17px;">Caídos y redondos</p>
+                  </div>
+              </div>
+          </div>
+          <br>
               <br>
-      <div class="form-group">
-            <a style="padding-right: 10px;">Talla de Camisa:</a>
-      <select name="tallac" class="selectpicker" style="padding: 8px;font-size: 20px; font: Raleway; background-color: #3f3f40; color: #f5f6f7; ">
-            <option>XXS</option>
-            <option>XS</option>
-            <option>S</option>
-            <option>M</option>
-            <option>L</option>
-            <option>XL</option>
-            <option>XXL</option>
-      </select>
-      </div>
-      <br>
-      <div class="form-group">
-            <a style="padding-right: 10px;">Talla de Pantalón:</a>
-      <select name="tallap" class="selectpicker" style="padding: 8px;font-size: 20px; font: Raleway; background-color: #3f3f40; color: #f5f6f7; ">
-            <option>00</option>
-            <option>0</option>
-            <option>2</option>
-            <option>4</option>
-            <option>6</option>
-            <option>8</option>
-            <option>10</option>
-            <option>12</option>
-            <option>14</option>
-            <option>16</option>
-            <option>18</option>
-            <option>20</option>
-            <option>22</option>
-      </select>
-      </div>
-      <br>
-      <p>A continuación, use una cinta métrica para medir lo que se le indica (campos no obligatorios)</p>
-      <br>
-      <input type="text" name="hombro" style="background-color: #f5f6f7; color: #3f3f40; border: 0.5px solid #3f3f40; margin-bottom: 20px;" placeholder="Hombro">
-      <br>
-      <input type="text" name="busto" style="background-color: #f5f6f7; color: #3f3f40; border: 0.5px solid #3f3f40; margin-bottom: 20px;" placeholder="Busto">
-      <br>
-      <input type="text" name="cintura" style="background-color: #f5f6f7; color: #3f3f40; border: 0.5px solid #3f3f40; margin-bottom: 20px;" placeholder="Cintura">
-      <br>
-      <input type="text" name="cadera" style="background-color: #f5f6f7; color: #3f3f40; border: 0.5px solid #3f3f40; margin-bottom: 20px;" placeholder="Cadera">
-            
-      <!--<p style="margin-top: 20px;">De estas imágenes, la que mejor me describe es</p>
-      <div class="container-fluid">
-<div id="picker3" class="row" style="text-align: center;">
-  <div id="image1" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-    <input type="image" name="cuerpo" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button" value="reloj">
-      <br>
-      <p style="font-size: 17px;">Reloj de arena</p>
-  </div>
-  <div id="image2" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-    <input type="image" name="cuerpo" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button" value="relojs">
-      <br>
-      <p style="font-size: 17px;">Reloj superior</p>
-  </div>
-  <div id="image3" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-    <input type="image" name="cuerpo" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button" value="cuchara">
-      <br>
-      <p style="font-size: 17px;">Cuchara</p>
-  </div>
-        <div id="image4" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-    <input type="image" name="cuerpo" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button" value="pera">
-      <br>
-      <p style="font-size: 17px;">Pera</p>
-  </div>
-        <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-    <input type="image" name="cuerpo" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button" value="triangulo">
-      <br>
-      <p style="font-size: 17px;">Triángulo invertido</p>
-  </div>
-        <div id="image6" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-    <input type="image" name="cuerpo" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button" value="manzana">
-      <br>
-      <p style="font-size: 17px;">Manzana</p>
-  </div>
-        <div id="image7" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-   <input type="image" name="cuerpo" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button" value="rectangulo">
-      <br>
-      <p style="font-size: 17px;">Rectángulo</p>
-  </div>
-</div>
-</div>-->
-  </div>
-  <div class="tab-pane fade" id="oseo-just" role="tabpanel" aria-labelledby="oseo-tab-just">
-    <p style="margin-top: 20px;">En cuanto a altura:</p>
-        <br>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" name="select1" value="a" onclick="myFunction(this.value)">
-  <p for="x" style="font-size: 17px;">Me veo mucho más baja de lo que soy</p>
-                </div>
-                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" name="select1" value="b" onclick="myFunction(this.value)">
-  <p for="x" style="font-size: 17px;">Tiendo a verme un poco más baja de lo que soy</p>
-                </div>
-                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" name="select1" value="c" onclick="myFunction(this.value)">
-  <p for="x" style="font-size: 17px;">Me veo de la estatura que soy</p>
-                </div>
-                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" name="select1" value="d" onclick="myFunction(this.value)">
-  <p for="x" style="font-size: 17px;">Me veo un poco más alta de lo que soy</p>
-                </div>
-                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" name="select1" value="e" onclick="myFunction(this.value)">
-  <p for="x" style="font-size: 17px;">Me veo un mucho más alta de lo  que soy</p>
-                </div>
-            </div>
-        </div>
+              <p style="margin-top: 20px;">En comparación con el resto de mi cuerpo, mis brazos y piernas son:</p>
+          <br>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select3" value="a" onclick="updateTotal();">
+    <p for="male" style="font-size: 17px;">Largos y delgados</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select3" value="b" onclick="updateTotal();">
+    <p for="male" style="font-size: 17px;">Largos y anchos</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select3" value="c" onclick="updateTotal();">
+    <p for="male" style="font-size: 17px;">Moderados, en buena proporción con el resto de mi cuerpo</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select3" value="d" onclick="updateTotal();">
+    <p for="male" style="font-size: 17px;">Pequeños en comparación con mi cuerpo</p>
+                  </div>
+              </div>
+          </div>
+          <br>
+           <p style="margin-top: 20px;">En comparación con el resto de mi cuerpo, mis manos y pies son:</p>
+          <br>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select4" value="a" onclick="updateTotal();">
+    <p for="male" style="font-size: 17px;">Largos y delgados</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select4" value="b" onclick="updateTotal();">
+    <p for="male" style="font-size: 17px;">Largos y anchos</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select4" value="c" onclick="updateTotal();">
+    <p for="male" style="font-size: 17px;">Moderados, en buena proporción con el resto de mi cuerpo</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select4" value="d" onclick="updateTotal();">
+    <p for="male" style="font-size: 17px;">Chicos, delgados y delicados</p>
+                  </div>
+                                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select4" value="e" onclick="updateTotal();">
+    <p for="male" style="font-size: 17px;">Chicos y un poco anchos</p>
+                  </div>
+              </div>
+          </div>
+              <br>
+              <p name="oseo" id="demo"></p>
+               <script>
+          function updateTotal() {
+      var uno = document.getElementsByName('select1');
+      var dos = document.getElementsByName('select2');
+      var tres = document.getElementsByName('select3');
+      var cuatro = document.getElementsByName('select4');
+          var r1;
+          var r2;
+          var r3;
+          var r4;
+          for(var i = 0;i < uno.length;i++)
+       {
+          if(uno[i].checked)
+          {
+           r1 = uno[i].value;
+          }
+       }
 
-        <br>
-        
-   <!--       <p style="margin-top: 20px;">Mis hombros son:</p>
-        <div class="container-fluid">
-  <div id="picker" class="row">
-    <div id="image1" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Marcados/ delgados y chicos</p>
+           for(var i = 0;i < dos.length;i++)
+       {
+          if(dos[i].checked)
+          {
+           r2 = dos[i].value;
+          }
+       }
+          for(var i = 0;i < tres.length;i++)
+       {
+          if(tres[i].checked)
+          {
+           r3 = tres[i].value;
+          }
+       }
+           for(var i = 0;i < cuatro.length;i++)
+       {
+          if(cuatro[i].checked)
+          {
+           r4 = cuatro[i].value;
+          }
+       }
+        document.getElementById("demo").innerHTML = r1 + r2 + r3 + r4;
+          }
+      </script>
     </div>
-    <div id="image2" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-      <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
+    <div class="tab-pane fade" id="cuerpo-just" role="tabpanel" aria-labelledby="cuerpo-tab-just">
+      <div id="dynamicContentDiv">
+      <div class="form cf">
+            <section class="pregunta2 cf">
+          <p style="margin-top: 20px; font-size: 30px; color: #3f3f40">La forma general de mi cuerpo es:</p>
+                  <div class="container-fluid">
+              <div class="row">
+                  <div id="image3" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="radio" name="radio2" id="delgada" value="a" onclick="updateTotal2();"><label class="delgada-label four coll" for="delgada" style="background-image: url(imagenes/vestido.png); font-size: 20px;">Delgada</label>
+                  </div>
+                  <div id="image3" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="radio" name="radio2" id="musculo" value="b" onclick="updateTotal2();"><label class="musculo-label four coll" for="musculo" style="background-image: url(imagenes/vestido.png); font-size: 20px;">Ancha y musculosa</label>
+                  </div>
+                  <div id="image3" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+                  <input type="radio" name="radio2" id="moderada" value="c" onclick="updateTotal2();"><label class="moderada-label four coll" for="moderada" style="background-image: url(imagenes/vestido.png); font-size: 20px;">Moderada</label>
+                  </div>
+                  <div id="image3" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="radio" name="radio2" id="pococurva" value="d" onclick="updateTotal2();"><label class="pococurva-label four coll" for="pococurva" style="background-image: url(imagenes/vestido.png); font-size: 20px;">Un poco curveada</label>
+                  </div>
+                  <div id="image3" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+                  <input type="radio" name="radio2" id="curva" value="e" onclick="updateTotal2();"><label class="curva-label four coll" for="curva" style="background-image: url(imagenes/vestido.png); font-size: 20px;">Muy curveada</label>
+                  </div>
+                      </div>
+                  </div>
+        </section>
+          </div>
+      </div>
+               <br>
+           <p style="margin-top: 20px;">La forma de la parte superior de mi torso/ busto es:</p>
+          <br>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select5" value="a" onclick="updateTotal2();">
+    <p for="male" style="font-size: 17px;">Plana, no suelo ganar mucha masa en esta parte</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select5" value="b" onclick="updateTotal2();">
+    <p for="male" style="font-size: 17px;">Ancha, puedo ganar masa en esta parte pero no mucha</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select5" value="c" onclick="updateTotal2();">
+    <p for="male" style="font-size: 17px;">Moderada</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select5" value="d" onclick="updateTotal2();">
+    <p for="male" style="font-size: 17px;">Curveada, tiendo a ganar masa en esta parte</p>
+                  </div>
+                                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select5" value="e" onclick="updateTotal2();">
+    <p for="male" style="font-size: 17px;">Muy curveada, siempre hay más masa en esta parte, aún estando en forma</p>
+                  </div>
+              </div>
+          </div>
         <br>
-        <p style="font-size: 17px;">Anchos y rectos</p>
-    </div>
-    <div id="image3" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Moderados y simétricos</p>
-    </div>
-      <div id="image3" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Caídos y un poco marcados/ rectos</p>
-    </div>
-      <div id="image4" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Caídos y redondos</p>
-    </div>
-  </div>
-</div> -->
-            <br>
-            <p style="margin-top: 20px;">En comparación con el resto de mi cuerpo, mis brazos y piernas son:</p>
-        <br>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" id="1" name="selec1" value="1">
-  <p for="male" style="font-size: 17px;">Largos y delgados</p>
-                </div>
-                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" id="2" name="select1" value="2">
-  <p for="male" style="font-size: 17px;">Largos y anchos</p>
-                </div>
-                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" id="3" name="select1" value="3">
-  <p for="male" style="font-size: 17px;">Moderados, en buena proporción con el resto de mi cuerpo</p>
-                </div>
-                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" id="4" name="select1" value="4">
-  <p for="male" style="font-size: 17px;">Pequeños en comparación con mi cuerpo</p>
-                </div>
-            </div>
+           <p style="margin-top: 20px;">La forma de mi cintura es:</p>
+          <br>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select6" value="a" onclick="updateTotal2();">
+    <p for="male" style="font-size: 17px;">Larga y sin mucha curva</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select6" value="b" onclick="updateTotal2();">
+    <p for="male" style="font-size: 17px;">Larga pero ancha</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select6" value="c" onclick="updateTotal2();">
+    <p for="male" style="font-size: 17px;">Moderada, un poco definida</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select6" value="d" onclick="updateTotal2();">
+    <p for="male" style="font-size: 17px;">Muy pequeña</p>
+                  </div>
+                                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select6" value="e" onclick="updateTotal2();">
+    <p for="male" style="font-size: 17px;">Delicadamente definida, pero tiende a ser un poco ancha</p>
+                  </div>
+              </div>
         </div>
-        <br>
-         <p style="margin-top: 20px;">En comparación con el resto de mi cuerpo, mis manos y pies son:</p>
-        <br>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" id="1" name="select2" value="a" onclick="myFunction2(this.value)">
-  <p for="male" style="font-size: 17px;">Largos y delgados</p>
-                </div>
-                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" name="select2" value="b" onclick="myFunction2(this.value)">
-  <p for="male" style="font-size: 17px;">Largos y anchos</p>
-                </div>
-                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" name="select2" value="c" onclick="myFunction2(this.value)">
-  <p for="male" style="font-size: 17px;">Moderados, en buena proporción con el resto de mi cuerpo</p>
-                </div>
-                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" name="select2" value="d" onclick="myFunction2(this.value)">
-  <p for="male" style="font-size: 17px;">Chicos, delgados y delicados</p>
-                </div>
-                                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" name="select2" value="e" onclick="myFunction2(this.value)">
-  <p for="male" style="font-size: 17px;">Chicos y un poco anchos</p>
-                </div>
-            </div>
+              <br>
+           <p style="margin-top: 20px;">Mis caderas son:</p>
+          <br>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select7" value="a" onclick="updateTotal2();">
+    <p for="male" style="font-size: 17px;">Delgadas, estrechas y rectas, aunque gano un poco de masa cuando subo de peso</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select7" value="b" onclick="updateTotal2();">
+    <p for="male" style="font-size: 17px;">Rectas y un poco anchas, la mayor parte de mi masa se acumula en esta parte</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select7" value="c" onclick="updateTotal2();">
+    <p for="male" style="font-size: 17px;">Moderadas, proporcionadas</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select7" value="d" onclick="updateTotal2();">
+    <p for="male" style="font-size: 17px;">Redonda, más pronunciada que mi cintura</p>
+                  </div>
+                                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select7" value="e" onclick="updateTotal2();">
+    <p for="male" style="font-size: 17px;">Muy suave y redonda, independientemente del peso</p>
+                  </div>
+              </div>
         </div>
-  </div>
-  <div class="tab-pane fade" id="cuerpo-just" role="tabpanel" aria-labelledby="cuerpo-tab-just">
- <!--   <p style="margin-top: 20px;">La forma general de mi cuerpo es:</p>
-        <div class="container-fluid">
-  <div id="picker" class="row">
-    <div id="image1" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Delgada</p>
+                    <br>
+           <p style="margin-top: 20px;">La mejor manera de describir mis brazos y muslos es:</p>
+          <br>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select8" value="a" onclick="updateTotal2();">
+    <p for="male" style="font-size: 17px;">Largos y delgados</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select8" value="b" onclick="updateTotal2();">
+    <p for="male" style="font-size: 17px;">Largos, tienden a tener músculo</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select8" value="c" onclick="updateTotal2();">
+    <p for="male" style="font-size: 17px;">Moderados</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select8" value="d" onclick="updateTotal2();">
+    <p for="male" style="font-size: 17px;">Suaves y un poco cortos</p>
+                  </div>
+                                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select8" value="e" onclick="updateTotal2();">
+    <p for="male" style="font-size: 17px;">Muy suaves y anchos</p>
+                  </div>
+              </div>
+        </div>
+                   <br>
+              <p name="fisico" id="demo2"></p>
+               <script>
+          function updateTotal2() {
+      var uno = document.getElementsByName('radio2');
+      var dos = document.getElementsByName('select5');
+      var tres = document.getElementsByName('select6');
+      var cuatro = document.getElementsByName('select7');
+       var cinco = document.getElementsByName('select8');
+          var r1;
+          var r2;
+          var r3;
+          var r4;
+          var r5;
+          for(var i = 0;i < uno.length;i++)
+       {
+          if(uno[i].checked)
+          {
+           r1 = uno[i].value;
+          }
+       }
+
+           for(var i = 0;i < dos.length;i++)
+       {
+          if(dos[i].checked)
+          {
+           r2 = dos[i].value;
+          }
+       }
+          for(var i = 0;i < tres.length;i++)
+       {
+          if(tres[i].checked)
+          {
+           r3 = tres[i].value;
+          }
+       }
+           for(var i = 0;i < cuatro.length;i++)
+       {
+          if(cuatro[i].checked)
+          {
+           r4 = cuatro[i].value;
+          }
+       }
+          for(var i = 0;i < cinco.length;i++)
+       {
+          if(cinco[i].checked)
+          {
+           r5 = cinco[i].value;
+          }
+       }
+        document.getElementById("demo2").innerHTML = r1 + r2 + r3 + r4 + r5;
+          }
+      </script>
     </div>
-    <div id="image2" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-      <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Ancha y musculosa</p>
+      <div class="tab-pane fade" id="rasgo-just" role="tabpanel" aria-labelledby="rasgo-tab-just">
+           <p style="margin-top: 20px;">Mi barbilla es:</p>
+          <br>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select9" value="a" onclick="updateTotal3();">
+    <p for="x" style="font-size: 17px;">Puntiaguda o muy cuadrada</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select9" value="b" onclick="updateTotal3();">
+    <p for="x" style="font-size: 17px;">Ancha, prominente</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select9" value="c" onclick="updateTotal3();">
+    <p for="x" style="font-size: 17px;">Moderada, no muy puntiaguada ni redonda o cuadrada</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select9" value="d" onclick="updateTotal3();">
+    <p for="x" style="font-size: 17px;">Delicada, un poco chica</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select9" value="e" onclick="updateTotal3();">
+    <p for="x" style="font-size: 17px;">Redonda o algo ancha</p>
+                  </div>
+              </div>
+          </div>
+          <br>
+              <p style="margin-top: 20px;">Mi nariz es:</p>
+          <br>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select10" value="a" onclick="updateTotal3();">
+    <p for="x" style="font-size: 17px;">Puntiaguda o prominente</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select10" value="b" onclick="updateTotal3();">
+    <p for="x" style="font-size: 17px;">Ancha, grande o larga</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select10" value="c" onclick="updateTotal3();">
+    <p for="x" style="font-size: 17px;">No muy grande ni muy chica, no muy redonda o puntiaguda</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select10" value="d" onclick="updateTotal3();">
+    <p for="x" style="font-size: 17px;">Delicada y pequeña</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select10" value="e" onclick="updateTotal3();">
+    <p for="x" style="font-size: 17px;">Redonda o un poco ancha</p>
+                  </div>
+              </div>
+          </div>
+          <br>
+                      <p style="margin-top: 20px;">Mis pómulos son:</p>
+          <br>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select11" value="a" onclick="updateTotal3();">
+    <p for="x" style="font-size: 17px;">Altos y prominentes</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select11" value="b" onclick="updateTotal3();">
+    <p for="x" style="font-size: 17px;">Anchos</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select11" value="c" onclick="updateTotal3();">
+    <p for="x" style="font-size: 17px;">Moderados</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select11" value="d" onclick="updateTotal3();">
+    <p for="x" style="font-size: 17px;">Delicados, pequeños y un poco redondos</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select11" value="e" onclick="updateTotal3();">
+    <p for="x" style="font-size: 17px;">Redondos</p>
+                  </div>
+              </div>
+          </div>
+          <br>
+            <p style="margin-top: 20px;">Mis ojos son:</p>
+          <br>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select12" value="a" onclick="updateTotal3();">
+    <p for="x" style="font-size: 17px;">Chicos, rectos y cercanos entre sí</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select12" value="b" onclick="updateTotal3();">
+    <p for="x" style="font-size: 17px;">Chicos, rectos y lejanos entre sí</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select12" value="c" onclick="updateTotal3();">
+    <p for="x" style="font-size: 17px;">Ni muy chicos ni muy grandes, proporcionados entre sí</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select12" value="d" onclick="updateTotal3();">
+    <p for="x" style="font-size: 17px;">Redondos o hacia arriba, un poco juntos</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select12" value="e" onclick="updateTotal3();">
+    <p for="x" style="font-size: 17px;">Muy grandes y redondos</p>
+                  </div>
+              </div>
+          </div>
+          <br>
+                    <p style="margin-top: 20px;">Mis labios son:</p>
+          <br>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select13" value="a" onclick="updateTotal3();">
+    <p for="x" style="font-size: 17px;">Rectos y delgados</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select13" value="b" onclick="updateTotal3();">
+    <p for="x" style="font-size: 17px;">Rectos, delgados, fuertes y largos</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select13" value="c" onclick="updateTotal3();">
+    <p for="x" style="font-size: 17px;">Moderados, no muy anchos ni muy delgados</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select13" value="d" onclick="updateTotal3();">
+    <p for="x" style="font-size: 17px;">Un poco gruesos y redondos</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" name="select13" value="e" onclick="updateTotal3();">
+    <p for="x" style="font-size: 17px;">Muy gruesos y redondos</p>
+                  </div>
+              </div>
+          </div>
+                         <br>
+              <p name="rasgo" id="demo3"></p>
+               <script>
+          function updateTotal3() {
+      var uno = document.getElementsByName('select9');
+      var dos = document.getElementsByName('select10');
+      var tres = document.getElementsByName('select11');
+      var cuatro = document.getElementsByName('select12');
+       var cinco = document.getElementsByName('select13');
+          var r1;
+          var r2;
+          var r3;
+          var r4;
+          var r5;
+          for(var i = 0;i < uno.length;i++)
+       {
+          if(uno[i].checked)
+          {
+           r1 = uno[i].value;
+          }
+       }
+
+           for(var i = 0;i < dos.length;i++)
+       {
+          if(dos[i].checked)
+          {
+           r2 = dos[i].value;
+          }
+       }
+          for(var i = 0;i < tres.length;i++)
+       {
+          if(tres[i].checked)
+          {
+           r3 = tres[i].value;
+          }
+       }
+           for(var i = 0;i < cuatro.length;i++)
+       {
+          if(cuatro[i].checked)
+          {
+           r4 = cuatro[i].value;
+          }
+       }
+          for(var i = 0;i < cinco.length;i++)
+       {
+          if(cinco[i].checked)
+          {
+           r5 = cinco[i].value;
+          }
+       }
+        document.getElementById("demo3").innerHTML = r1 + r2 + r3 + r4 + r5;
+          }
+      </script>
     </div>
-    <div id="image3" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Moderada</p>
-    </div>
-      <div id="image4" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Un poco curveada</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Muy curveada</p>
-    </div>
-  </div>
-</div>
-<br>
-          <p style="margin-top: 20px;">La forma de la parte superior de mi torso/ busto es:</p>
-        <div class="container-fluid">
-  <div id="picker2" class="row">
-    <div id="image1" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Plana, no suelo ganar mucha masa en esta parte</p>
-    </div>
-    <div id="image2" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-      <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Ancha, puedo ganar masa en esta parte pero no mucha</p>
-    </div>
-    <div id="image3" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Moderada</p>
-    </div>
-      <div id="image4" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Curveada, tiendo a ganar masa en esta parte</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Muy curveada, siempre hay más masa en esta parte, aún estando en forma</p>
-    </div>
-  </div>
-</div>
+      <div class="tab-pane fade" id="piel-just" role="tabpanel" aria-labelledby="piel-tab-just">
+        <p style="margin-top: 20px;">Me gusta más la joyería:</p>
+          <br>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" id="1" name="select14" value="c" onclick="updateTotal4();">
+    <p for="male" style="font-size: 17px;">Dorada</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" id="2" name="select14" value="f" onclick="updateTotal4();">
+    <p for="male" style="font-size: 17px;">Plateada</p>
+                  </div>
+              </div>
+          </div>
+              <br>
+              <p style="margin-top: 20px;">El color de mis ojos es:</p>
+          <br>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
+    <input type="radio" id="1" name="select15" value="f" onclick="updateTotal4();">
+    <p for="male" style="font-size: 17px;">Azul o gris</p>
+                  </div>
+                  <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
+    <input type="radio" id="2" name="select15" value="n" onclick="updateTotal4();">
+    <p for="male" style="font-size: 17px;">Verde</p>
+                  </div>
+                  <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
+    <input type="radio" id="3" name="select15" value="c" onclick="updateTotal4();">
+    <p for="male" style="font-size: 17px;">Café claro</p>
+                  </div>
+                  <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
+    <input type="radio" id="4" name="select15" value="f" onclick="updateTotal4();">
+    <p for="male" style="font-size: 17px;">Oscuros</p>
+                  </div>
+              </div>
+          </div>
+          <br>
+           <p style="margin-top: 20px;">Mis venas se ven en el sol:</p>
+          <br>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="coll-12 col-sm-6 col-md-4 col-xl-4">
+    <input type="radio" id="1" name="select16" value="c" onclick="updateTotal4();">
+    <p for="male" style="font-size: 17px;">Verdes</p>
+                  </div>
+                  <div class="coll-12 col-sm-6 col-md-4 col-xl-4">
+    <input type="radio" id="2" name="select16" value="n" onclick="updateTotal4();">
+    <p for="male" style="font-size: 17px;">Azules y verdes</p>
+                  </div>
+                  <div class="coll-12 col-sm-6 col-md-4 col-xl-4">
+    <input type="radio" id="3" name="select16" value="f" onclick="updateTotal4();">
+    <p for="male" style="font-size: 17px;">Azules y moradas</p>
+                  </div>
+              </div>
+          </div>
+          <br>
+           <p style="margin-top: 20px;">Cuando me ruborizo, mi piel toma un color:</p>
+          <br>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
+    <input type="radio" id="1" name="select17" value="f" onclick="updateTotal4();">
+    <p for="male" style="font-size: 17px;">Rojo</p>
+                  </div>
+                  <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
+    <input type="radio" id="2" name="select17" value="f" onclick="updateTotal4();">
+    <p for="male" style="font-size: 17px;">Rosado</p>
+                  </div>
+                  <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
+    <input type="radio" id="3" name="select17" value="c" onclick="updateTotal4();">
+    <p for="male" style="font-size: 17px;">Naranja</p>
+                  </div><div class="coll-12 col-sm-6 col-md-4 col-xl-3">
+    <input type="radio" id="3" name="select17" value="c" onclick="updateTotal4();">
+    <p for="male" style="font-size: 17px;">Durazno</p>
+                  </div>
+              </div>
+          </div>
+          <br>
+                   <p style="margin-top: 20px;">El tono natural de mi cabello es:</p>
+          <br>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" id="1" name="select18" value="f" onclick="updateTotal4();">
+    <p for="male" style="font-size: 17px;">Negro/ muy oscuro</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" id="2" name="select18" value="c" onclick="updateTotal4();">
+    <p for="male" style="font-size: 17px;">Castaño, tiende a rojizo o dorado</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" id="3" name="select18" value="f" onclick="updateTotal4();">
+    <p for="male" style="font-size: 17px;">Castaño que brilla de tonos fríos (blanco/plateado)</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" id="3" name="select18" value="c" onclick="updateTotal4();">
+    <p for="male" style="font-size: 17px;">Rubio</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" id="3" name="select18" value="c" onclick="updateTotal4();">
+    <p for="male" style="font-size: 17px;">Pelirrojo</p>
+                  </div>
+              </div>
+          </div>
+          <br>
+           <p style="margin-top: 20px;">Mi cabello es:</p>
+          <br>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="coll-1 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" id="1" name="select19" value="+dos" onclick="updateTotal4();">
+    <p for="male" style="font-size: 17px;">Mucho más oscuro que mi piel</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" id="2" name="select19" value="-uno" onclick="updateTotal4();">
+    <p for="male" style="font-size: 17px;">Un poco más oscuro que mi piel</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" id="3" name="select19" value="cero" onclick="updateTotal4();">
+    <p for="male" style="font-size: 17px;">Aproximadamente del mismo tono que mi piel</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" id="3" name="select19" value="-dos" onclick="updateTotal4();">
+    <p for="male" style="font-size: 17px;">Un poco más claro que mi piel</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" id="3" name="select19" value="+dos" onclick="updateTotal4();">
+    <p for="male" style="font-size: 17px;">Mucho más claro que mi piel</p>
+                  </div>
+              </div>
+          </div>
+          <br>
+           <div id="dynamicContentDiv">
+      <div class="form cf">
+            <section class="pregunta3 cf">
+          <p style="margin-top: 20px; font-size: 30px; color: #3f3f40">De estos vestidos, me pondría (según su color):</p>
+                  <div class="container-fluid">
+              <div class="row">
+                  <div id="image3" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="radio" name="radio3" id="azulrey" value="fpuro" onclick="updateTotal4();"><label class="azulrey-label four coll" for="azulrey" style="background-image: url(https://cdn11.bigcommerce.com/s-kfhji/images/stencil/1280x1280/products/1044/24723/classic-multiway-convertible-bridesmaid-dress-royal-blue-2__61915.1543360923.jpg?c=2?imbypass=on); background-size: 235px; background-repeat: no-repeat; background-position: center center;"></label>
+                  </div>
+                  <div id="image3" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="radio" name="radio3" id="rojovivo" value="cpuro" onclick="updateTotal4();"><label class="rojovivo-label four coll" for="rojovivo" style="background-image: url(https://media.missguided.com/s/missguided/DE930631_set/1/red-high-neck-maxi-dress); background-size: 230px; background-repeat: no-repeat; background-position: center center;"></label>
+                  </div>
+                  <div id="image3" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+                  <input type="radio" name="radio3" id="azuloscuro" value="f+dos" onclick="updateTotal4();"><label class="azuloscuro-label four coll" for="azuloscuro" style="background-image: url(https://www.lulus.com/images/product/xlarge/3618510_647452.jpg); background-size: 230px; background-repeat: no-repeat; background-position: center center;"></label>
+                  </div>
+                  <div id="image3" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="radio" name="radio3" id="rojovino" value="c+dos" onclick="updateTotal4();"><label class="rojovino-label four coll" for="rojovino" style="background-image: url(https://cdn.tobi.com/product_images/lg/1/wine-wild-one-plunging-maxi-dress.jpg); background-size: 230px; background-repeat: no-repeat; background-position: center center;"></label>
+                  </div>
+                  <div id="image3" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+                  <input type="radio" name="radio3" id="negro" value="+dos" onclick="updateTotal4();"><label class="negro-label four coll" for="negro" style="background-image: url(https://media.missguided.com/i/missguided/DE921720_01?fmt=jpeg&fmt.jpeg.interlaced=true&$product-page__main--2x$); background-size: 230px; background-repeat: no-repeat; background-position: center center;"></label>
+                  </div>
+                  <div id="image3" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+                  <input type="radio" name="radio3" id="blanco" value="-dos" onclick="updateTotal4();"><label class="blanco-label four coll" for="blanco" style="background-image: url(https://media.missguided.com/i/missguided/DE928723_01?fmt=jpeg&fmt.jpeg.interlaced=true&$product-page__main--2x$); background-size: 230px; background-repeat: no-repeat; background-position: center center;"></label>
+                  </div>
+                  <div id="image3" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+                  <input type="radio" name="radio3" id="gris" value="cero" onclick="updateTotal4();"><label class="gris-label four coll" for="gris" style="background-image: url(https://www.lulus.com/images/product/xlarge/3239160_609152.jpg); background-size: 230px; background-repeat: no-repeat; background-position: center center;"></label>
+                  </div>
+                      </div>
+                  </div>
+        </section>
+          </div>
+      </div>
          <br>
-                  <p style="margin-top: 20px;">La forma de mi cintura es:</p>
-        <div class="container-fluid">
-  <div id="picker3" class="row">
-    <div id="image1" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Larga y sin mucha curva</p>
+              <p name="piel" id="demo4"></p>
+               <script>
+          function updateTotal4() {
+      var uno = document.getElementsByName('select14');
+      var dos = document.getElementsByName('select15');
+      var tres = document.getElementsByName('select16');
+      var cuatro = document.getElementsByName('select17');
+      var cinco = document.getElementsByName('select18');
+      var seis = document.getElementsByName('select19');
+      var siete = document.getElementsByName('radio3');
+          var r1;
+          var r2;
+          var r3;
+          var r4;
+          var r5;
+          var r6;
+          var r7;
+          for(var i = 0;i < uno.length;i++)
+       {
+          if(uno[i].checked)
+          {
+           r1 = uno[i].value;
+          }
+       }
+
+           for(var i = 0;i < dos.length;i++)
+       {
+          if(dos[i].checked)
+          {
+           r2 = dos[i].value;
+          }
+       }
+          for(var i = 0;i < tres.length;i++)
+       {
+          if(tres[i].checked)
+          {
+           r3 = tres[i].value;
+          }
+       }
+           for(var i = 0;i < cuatro.length;i++)
+       {
+          if(cuatro[i].checked)
+          {
+           r4 = cuatro[i].value;
+          }
+       }
+          for(var i = 0;i < cinco.length;i++)
+       {
+          if(cinco[i].checked)
+          {
+           r5 = cinco[i].value;
+          }
+       }
+          for(var i = 0;i < seis.length;i++)
+       {
+          if(seis[i].checked)
+          {
+           r6 = seis[i].value;
+          }
+       }
+          for(var i = 0;i < siete.length;i++)
+       {
+          if(siete[i].checked)
+          {
+           r7 = siete[i].value;
+          }
+       }
+        document.getElementById("demo4").innerHTML = r1 + "," + r2 + "," + r3 + "," + r4 + "," + r5 + "," + r6 + "," + r7;
+          }
+      </script>
     </div>
-    <div id="image2" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-      <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Larga pero ancha</p>
+      <div class="tab-pane fade" id="gusto-just" role="tabpanel" aria-labelledby="gusto-tab-just">
+              <div id="dynamicContentDiv">
+      <div class="form cf">
+            <section class="pregunta4 cf">
+          <p style="margin-top: 20px; font-size: 30px; color: #3f3f40">Los colores que me gustan son (puede seleccionar varios):</p>
+                  <div class="container-fluid">
+              <div class="row">
+                  <div id="image4" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="checkbox" name="colores" id="azul" value="azul" onclick="updateTotal6();"><label class="azul-label four coll" for="azul" style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEUAAP+KeNJXAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC);"></label>
+                  </div>
+                  <div id="image4" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="checkbox" name="colores" id="rojo" value="rojo" onclick="updateTotal6();"><label class="rojo-label four coll" for="rojo" style="background-image: url(https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/1245250/300/200/m1/fpc/wm0/jtyohxxxynzz2mwpz3t4osf9phgrkzi94ze9o3u9cbgilwbtqxjxo5h4atxtnmu3-.jpg?1462551410&s=f987cb4b9af6f2f02e65870edfdc4b6a);"></label>
+                  </div>
+                  <div id="image4" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+                  <input type="checkbox" name="colores" id="amarillo" value="amarillo" onclick="updateTotal6();"><label class="amarillo-label four coll" for="amarillo" style="background-image: url(https://significadodeloscolores.info/wp-content/uploads/2014/08/color-amarillo.png);"></label>
+                  </div>
+                  <div id="image4" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="checkbox" name="colores" id="verde" value="verde" onclick="updateTotal6();"><label class="verde-label four coll" for="verde" style="background-image: url(https://biblioteca.acropolis.org/wp-content/uploads/2014/12/verde-1200x839.png);"></label>
+                  </div>
+                  <div id="image4" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="checkbox" name="colores" id="rosa" value="rosa" onclick="updateTotal6();"><label class="rosa-label four coll" for="rosa" style="background-image: url(https://cdn10.bigcommerce.com/s-raqyrv37/products/95/images/453/pink_colored_sand__83720.1454605049.1280.850.jpg?c=2);"></label>
+                  </div>
+                  <div id="image4" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="checkbox" name="colores" id="naranja" value="naranja" onclick="updateTotal6();"><label class="naranja-label four coll" for="naranja" style="background-image: url(https://i.pinimg.com/originals/b7/83/49/b783496c9bb4f37355d99e4891b3c13a.png);"></label>
+                  </div>
+                  <div id="image4" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+                  <input type="checkbox" name="colores" id="negroo" value="negro" onclick="updateTotal6();"><label class="negroo-label four coll" for="negroo" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/50/Black_colour.jpg);"></label>
+                  </div>
+                  <div id="image4" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+                  <input type="checkbox" name="colores" id="blancoo" value="blanco" onclick="updateTotal6();"><label class="blancoo-label four coll" for="blancoo" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/White_color_Page.jpg/450px-White_color_Page.jpg);"></label>
+                  </div>
+                  <div id="image4" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+                  <input type="checkbox" name="colores" id="griss" value="gris" onclick="updateTotal6();"><label class="griss-label four coll" for="griss" style="background-image: url(https://www.coverstyl.com/dpics/articles/2019-10-03-02-40-47_NE79_2.jpg);"></label>
+                  </div>
+                      </div>
+                  </div>
+        </section>
+          </div>
+                    <div id="dynamicContentDiv">
+      <div class="form cf">
+            <section class="pregunta5 cf">
+          <p style="margin-top: 20px; font-size: 30px; color: #3f3f40">Los patrones que me gustan son (puede seleccionar varios):</p>
+                  <div class="container-fluid">
+              <div class="row">
+                  <div id="image5" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="checkbox" name="patrones" id="flores" value="flores" onclick="updateTotal7();"><label class="flores-label four coll" for="flores" style="background-image: url(https://i.pinimg.com/originals/df/bc/1b/dfbc1b54d97039b02d8fd3c282931269.jpg); background-size: 400px;"></label>
+                  </div>
+                  <div id="image5" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="checkbox" name="patrones" id="rayas" value="rayas" onclick="updateTotal7();"><label class="rayas-label four coll" for="rayas" style="background-image: url(https://www.creativefabrica.com/wp-content/uploads/2019/11/25/Stripes_72_prev-1-580x386.jpg);"></label>
+                  </div>
+                  <div id="image5" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+                  <input type="checkbox" name="patrones" id="circulos" value="circulos" onclick="updateTotal7();"><label class="circulos-label four coll" for="circulos" style="background-image: url(https://www.atrafloor.com/app/uploads/2020/01/TE5011BL03F-Swatch.jpg); background-size: 400px;"></label>
+                  </div>
+                  <div id="image5" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="checkbox" name="patrones" id="cuadros" value="cuadros" onclick="updateTotal7();"><label class="cuadros-label four coll" for="cuadros" style="background-image: url(https://previews.123rf.com/images/barrirret/barrirret1807/barrirret180700014/105440820-pink-tartan-seamless-vector-patterns-checkered-plaid-texture-pink-and-gray-geometrical-simple-square.jpg); background-size: 300px;"></label>
+                  </div>
+                  <div id="image5" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="checkbox" name="patrones" id="animal" value="animal" onclick="updateTotal7();"><label class="animal-label four coll" for="animal" style="background-image: url(https://d1yn1kh78jj1rr.cloudfront.net/image/thumbnail/rDtN98Qoishumwih/pinklovepaper_06-091815-1150_thumb.jpg);"></label>
+                  </div>
+                  <div id="image5" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="checkbox" name="patrones" id="divertido" value="divertido" onclick="updateTotal7();"><label class="divertido-label four coll" for="divertido" style="background-image: url(https://i.pinimg.com/originals/4b/12/22/4b12222b1e2836de43767ea0cc22c102.png); background-size: 300px; background-repeat: no-repeat; background-position: center center;"></label>
+                  </div>
+                      </div>
+                  </div>
+        </section>
+          </div>
+      </div>
+                    <div id="dynamicContentDiv">
+      <div class="form cf">
+            <section class="pregunta5 cf">
+          <p style="margin-top: 20px; font-size: 30px; color: #3f3f40">Suelo vestir (puede seleccionar varios):</p>
+                  <div class="container-fluid">
+              <div class="row">
+                  <div id="image5" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="checkbox" name="comoda" id="comoda" value="si"><label class="comoda-label four coll" for="comoda" style="background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(https://cdn.shopify.com/s/files/1/0056/9465/2505/products/9093DAD1-8610-4CB0-9A41-4C97A8C5ED55_1024x1024@2x.jpg?v=1573936342); background-size: 290px; background-repeat: no-repeat; background-position: center center;">Cómoda</label>
+                  </div>
+                  <div id="image5" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="checkbox" name="trabajo" id="formal" value="si"><label class="formal-label four coll" for="formal" style="background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(https://ae01.alicdn.com/kf/HTB1zKKxQSzqK1RjSZFHq6z3CpXax/Pink-Women-s-Double-Breasted-Business-Suit-Female-Custom-Made-Slim-Fit-Tuexdo-Suits-Female-Party.jpg); background-size: 330px; background-repeat: no-repeat; background-position: center center;">Formal</label>
+                  </div>
+                  <div id="image5" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+                  <input type="checkbox" name="deportiva" id="deportiva" value="si"><label class="deportiva-label four coll" for="deportiva" style="background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(https://media.missguided.com/i/missguided/SBB1503266_01?fmt=jpeg&fmt.jpeg.interlaced=true&$product-page__main--2x$); background-size: 235px; background-repeat: no-repeat; background-position: center center;">Deportiva</label>
+                  </div>
+                  <div id="image5" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="checkbox" name="noche" id="noche" value="si"><label class="noche-label four coll" for="noche" style="background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(https://cdn.shopify.com/s/files/1/0070/8853/7651/products/05103-0772_1_d368c3e0-fff2-4d83-8eb2-df98a86744b9_500x750_crop_center.jpg?v=1586558351); background-size: 230px; background-repeat: no-repeat; background-position: center center;">Noche</label>
+                  </div>
+                      </div>
+                  </div>
+        </section>
+          </div>
+      </div>
+                          <br>
+           <p style="margin-top: 20px;">Me gustaría resaltar mis (puede seleccionar varios):</p>
+          <br>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="coll-1 col-sm-12 col-md-6 col-xl-6">
+    <input type="checkbox" id="1" name="resalta" value="brazos" onclick="updateTotal8();">
+    <p for="male" style="font-size: 17px;">Brazos</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="checkbox" id="2" name="resalta" value="piernas" onclick="updateTotal8();">
+    <p for="male" style="font-size: 17px;">Piernas</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="checkbox" id="3" name="resalta" value="busto" onclick="updateTotal8();">
+    <p for="male" style="font-size: 17px;">Busto</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="checkbox" id="3" name="resalta" value="cintura" onclick="updateTotal8();">
+    <p for="male" style="font-size: 17px;">Cintura</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="checkbox" id="3" name="resalta" value="cadera" onclick="updateTotal8();">
+    <p for="male" style="font-size: 17px;">Caderas/ glúteos</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="checkbox" id="3" name="resalta" value="hombros" onclick="updateTotal8();">
+    <p for="male" style="font-size: 17px;">Hombros/ cuello</p>
+                  </div>
+              </div>
+          </div>
+          <br>
+                                    <div id="dynamicContentDiv">
+      <div class="form cf">
+            <section class="pregunta5 cf">
+          <p style="margin-top: 20px; font-size: 30px; color: #3f3f40">Mi estilo personal es (puede seleccionar varios):</p>
+                  <div class="container-fluid">
+              <div class="row">
+                  <div id="image5" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="checkbox" name="estilos" id="rock" value="rock" onclick="updateTotal5();"><label class="rock-label four coll" for="rock" style="background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(https://i.pinimg.com/736x/ba/d0/b3/bad0b31b7119d4b1394393893b0cdc07.jpg); background-size: 230px; background-repeat: no-repeat; background-position: center center;">Rock/ goth</label>
+                  </div>
+                  <div id="image5" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="checkbox" name="estilos" id="elegante" value="elegante" onclick="updateTotal5();"><label class="elegante-label four coll" for="elegante" style="background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(https://i.pinimg.com/originals/97/95/15/97951509fe71c604823ee41706df8d9b.jpg); background-size: 250px; background-repeat: no-repeat; background-position: center center;">Elegante</label>
+                  </div>
+                  <div id="image5" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+                  <input type="checkbox" name="estilos" id="tierno" value="tierno" onclick="updateTotal5();"><label class="tierno-label four coll" for="tierno" style="background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(https://i.pinimg.com/originals/01/7c/61/017c612034e846db6c5ddd103ca9b34c.jpg); background-size: 240px; background-repeat: no-repeat; background-position: center center;">Tierno</label>
+                  </div>
+                  <div id="image5" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="checkbox" name="estilos" id="sencillo" value="sencillo" onclick="updateTotal5();"><label class="sencillo-label four coll" for="sencillo" style="background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(https://images.prod.meredith.com/product/1868140f4fc566187b4d90c3d90ba2c4/1556140478928/l/bewear-womens-open-cardigans-open-pink-open-front-hooded-knit-cardigan-women); background-size: 245px; background-repeat: no-repeat; background-position: center center;">Sencillo</label>
+                  </div>
+                  <div id="image5" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="checkbox" name="estilos" id="minimalista" value="minimalista" onclick="updateTotal5();"><label class="minimalista-label four coll" for="minimalista" style="background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(https://i.pinimg.com/originals/af/3d/06/af3d06d022b78029d41c52ec08fe3471.jpg); background-size: 320px; background-repeat: no-repeat; background-position: center center;">Minimalista</label>
+                  </div>
+                  <div id="image5" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
+          <input type="checkbox" name="estilos" id="relajado" value="relajado" onclick="updateTotal5();"><label class="relajado-label four coll" for="relajado" style="background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(https://www.treeoflife.com.au/media/catalog/product/cache/hover/38051454/x/9/x9899-rayon_02.jpg); background-size: 250px; background-repeat: no-repeat; background-position: center center; font-size: 20px;">Relajado/ Boho</label>
+                  </div>
+                      </div>
+                  </div>
+        </section>
+          </div>
+      </div>
+                                          <br>
+           <p style="margin-top: 20px;">Me gusta que mis pantalones:</p>
+          <br>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="coll-1 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" id="1" name="pantalonc" value="cubierto">
+    <p for="male" style="font-size: 17px;">Me cubran los tobillos</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" id="2" name="pantalonc" value="mitad">
+    <p for="male" style="font-size: 17px;">Estén a la mitad de los tobillos</p>
+                  </div>
+                  <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
+    <input type="radio" id="3" name="pantalonc" value="arriba">
+    <p for="male" style="font-size: 17px;">Estén arriba de mis tobillos</p>
+                  </div>
+              </div>
+          </div>
+          </div>
+                 <br>
+              <p name="estilo" id="demo5"></p>
+              <p name="color" id="demo6"></p>
+              <p name="patron" id="demo7"></p>
+              <p name="resaltar" id="demo8"></p>
+               <script>
+          function updateTotal5() {
+      var respuesta = document.getElementsByName('estilos');
+          var r = "";
+          for(var i = 0;i < respuesta.length;i++)
+       {
+          if(respuesta[i].checked)
+          {
+           r = r + "," + respuesta[i].value;
+          }
+       }
+
+        document.getElementById("demo5").innerHTML = r;
+          }
+           function updateTotal6() {
+      var respuesta = document.getElementsByName('colores');
+          var r = "";
+          for(var i = 0;i < respuesta.length;i++)
+       {
+          if(respuesta[i].checked)
+          {
+           r = r + "," + respuesta[i].value;
+          }
+       }
+
+        document.getElementById("demo6").innerHTML = r;
+          }
+          function updateTotal7() {
+      var respuesta = document.getElementsByName('patrones');
+          var r = "";
+          for(var i = 0;i < respuesta.length;i++)
+       {
+          if(respuesta[i].checked)
+          {
+           r = r + "," + respuesta[i].value;
+          }
+       }
+
+        document.getElementById("demo7").innerHTML = r;
+          }
+          function updateTotal8() {
+      var respuesta = document.getElementsByName('resalta');
+          var r = "";
+          for(var i = 0;i < respuesta.length;i++)
+       {
+          if(respuesta[i].checked)
+          {
+           r = r + "," + respuesta[i].value;
+          }
+       }
+
+        document.getElementById("demo8").innerHTML = r;
+          }
+      </script>
     </div>
-    <div id="image3" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Moderada, un poco definida</p>
-    </div>
-      <div id="image4" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Muy pequeña</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Delicadamente definida, pero tiende a ser un poco ancha</p>
-    </div>
-  </div>
-</div>
-         <br>
-                  <p style="margin-top: 20px;">Mis caderas son:</p>
-        <div class="container-fluid">
-  <div id="picker4" class="row">
-    <div id="image1" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Delgadas, estrechas y rectas, aunque gano un poco de masa cuando subo de peso</p>
-    </div>
-    <div id="image2" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-      <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Recta y un poco ancha, la mayor parte de mi masa se acumula en esta parte</p>
-    </div>
-    <div id="image3" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Moderada, proporcionada</p>
-    </div>
-      <div id="image4" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Redonda, más pronunciada que mi cintura</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Muy suave y redonda, independientemente del peso</p>
-    </div>
-  </div>
-</div>
-                  <p style="margin-top: 20px;">La mejor manera de describir mis brazos y muslos es:</p>
-        <div class="container-fluid">
-  <div id="picker2" class="row">
-    <div id="image1" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Largos y delgados</p>
-    </div>
-    <div id="image2" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-      <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Largos, tienden a tener músculo</p>
-    </div>
-    <div id="image3" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Moderados</p>
-    </div>
-      <div id="image4" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Suaves y un poco cortos</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Muy suaves y anchos</p>
-    </div>
-  </div>
-</div> -->
-  </div>
-    <div class="tab-pane fade" id="rasgo-just" role="tabpanel" aria-labelledby="rasgo-tab-just">
- <!-- <p style="margin-top: 20px;">Mi barbilla es:</p>
-        <div class="container-fluid">
-  <div id="picker" class="row">
-    <div id="image1" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Puntiaguda o muy cuadrada</p>
-    </div>
-    <div id="image2" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-      <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Ancha, prominente</p>
-    </div>
-    <div id="image3" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Moderada, no muy puntiaguada ni redonda o cuadrada</p>
-    </div>
-      <div id="image4" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Delicada, un poco chica</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Redonda o algo ancha</p>
-    </div>
-  </div>
-</div>
-<br>
-          <p style="margin-top: 20px;">Mi nariz es:</p>
-        <div class="container-fluid">
-  <div id="picker2" class="row">
-    <div id="image1" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Puntiaguda o prominente</p>
-    </div>
-    <div id="image2" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-      <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Ancha, grande o larga</p>
-    </div>
-    <div id="image3" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">No muy grande ni muy chica, no muy redonda o puntiaguda</p>
-    </div>
-      <div id="image4" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Delicada y pequeña</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Redonda o un poco ancha</p>
-    </div>
-  </div>
-</div>
-         <br>
-                  <p style="margin-top: 20px;">Mis pómulos son:</p>
-        <div class="container-fluid">
-  <div id="picker3" class="row">
-    <div id="image1" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Altos y prominentes</p>
-    </div>
-    <div id="image2" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-      <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Anchos</p>
-    </div>
-    <div id="image3" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Moderados</p>
-    </div>
-      <div id="image4" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Delicados, pequeños y un poco redondos</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Redondos</p>
-    </div>
-  </div>
-</div>
-         <br>
-                  <p style="margin-top: 20px;">Mis ojos son:</p>
-        <div class="container-fluid">
-  <div id="picker4" class="row">
-    <div id="image1" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Chicos, rectos y cercanos entre sí</p>
-    </div>
-    <div id="image2" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-      <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Chicos, rectos y lejanos entre sí</p>
-    </div>
-    <div id="image3" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Ni muy chicos ni muy grandes, proporcionados entre sí</p>
-    </div>
-      <div id="image4" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Redondos o hacia arriba, un poco juntos</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Muy grandes y redondos</p>
-    </div>
-  </div>
-</div>
-                  <p style="margin-top: 20px;">Mis labios son:</p>
-        <div class="container-fluid">
-  <div id="picker5" class="row">
-    <div id="image1" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Rectos y delgados</p>
-    </div>
-    <div id="image2" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-      <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Rectos, delgados, fuertes y largos</p>
-    </div>
-    <div id="image3" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Moderados, no muy anchos ni muy delgados</p>
-    </div>
-      <div id="image4" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Un poco gruesos y redondos</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Muy gruesos y redondos</p>
-    </div>
-  </div>
-</div> -->
-  </div>
-    <div class="tab-pane fade" id="piel-just" role="tabpanel" aria-labelledby="piel-tab-just">
-      <p style="margin-top: 20px;">Me gusta más la joyería:</p>
-        <br>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" id="1" name="selec1" value="1">
-  <p for="male" style="font-size: 17px;">Dorada</p>
-                </div>
-                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" id="2" name="select1" value="2">
-  <p for="male" style="font-size: 17px;">Plateada</p>
-                </div>
-            </div>
-        </div>
-            <br>
-            <p style="margin-top: 20px;">El color de mis ojos es:</p>
-        <br>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
-  <input type="radio" id="1" name="selec1" value="1">
-  <p for="male" style="font-size: 17px;">Azul o gris</p>
-                </div>
-                <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
-  <input type="radio" id="2" name="select1" value="2">
-  <p for="male" style="font-size: 17px;">Verde</p>
-                </div>
-                <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
-  <input type="radio" id="3" name="select1" value="3">
-  <p for="male" style="font-size: 17px;">Café claro</p>
-                </div>
-                <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
-  <input type="radio" id="4" name="select1" value="4">
-  <p for="male" style="font-size: 17px;">Oscuros</p>
-                </div>
-            </div>
-        </div>
-        <br>
-         <p style="margin-top: 20px;">Mis venas se ven en el sol:</p>
-        <br>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="coll-12 col-sm-6 col-md-4 col-xl-4">
-  <input type="radio" id="1" name="selec1" value="1">
-  <p for="male" style="font-size: 17px;">Verdes</p>
-                </div>
-                <div class="coll-12 col-sm-6 col-md-4 col-xl-4">
-  <input type="radio" id="2" name="select1" value="2">
-  <p for="male" style="font-size: 17px;">Azules y verdes</p>
-                </div>
-                <div class="coll-12 col-sm-6 col-md-4 col-xl-4">
-  <input type="radio" id="3" name="select1" value="3">
-  <p for="male" style="font-size: 17px;">Azules y moradas</p>
-                </div>
-            </div>
-        </div>
-        <br>
-         <p style="margin-top: 20px;">Cuando me ruborizo, mi piel toma un color:</p>
-        <br>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
-  <input type="radio" id="1" name="selec1" value="1">
-  <p for="male" style="font-size: 17px;">Rojo</p>
-                </div>
-                <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
-  <input type="radio" id="2" name="select1" value="2">
-  <p for="male" style="font-size: 17px;">Rosado</p>
-                </div>
-                <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
-  <input type="radio" id="3" name="select1" value="3">
-  <p for="male" style="font-size: 17px;">Naranja</p>
-                </div><div class="coll-12 col-sm-6 col-md-4 col-xl-3">
-  <input type="radio" id="3" name="select1" value="3">
-  <p for="male" style="font-size: 17px;">Durazno</p>
-                </div>
-            </div>
-        </div>
-        <br>
-                 <p style="margin-top: 20px;">El tono natural de mi cabello es:</p>
-        <br>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" id="1" name="selec1" value="1">
-  <p for="male" style="font-size: 17px;">Negro/ muy oscuro</p>
-                </div>
-                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" id="2" name="select1" value="2">
-  <p for="male" style="font-size: 17px;">Castaño, tiende a rojizo o dorado</p>
-                </div>
-                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" id="3" name="select1" value="3">
-  <p for="male" style="font-size: 17px;">Castaño que brilla un poco gris/ opaco (mousy)</p>
-                </div>
-                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" id="3" name="select1" value="3">
-  <p for="male" style="font-size: 17px;">Rubio</p>
-                </div>
-                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" id="3" name="select1" value="3">
-  <p for="male" style="font-size: 17px;">Pelirrojo</p>
-                </div>
-            </div>
-        </div>
-        <br>
-         <p style="margin-top: 20px;">Mi cabello es:</p>
-        <br>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" id="1" name="selec1" value="1">
-  <p for="male" style="font-size: 17px;">Mucho más oscuro que mi piel</p>
-                </div>
-                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" id="2" name="select1" value="2">
-  <p for="male" style="font-size: 17px;">Un poco más oscuro que mi piel</p>
-                </div>
-                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" id="3" name="select1" value="3">
-  <p for="male" style="font-size: 17px;">Aproximadamente del mismo tono que mi piel</p>
-                </div>
-                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" id="3" name="select1" value="3">
-  <p for="male" style="font-size: 17px;">Un poco más claro que mi piel</p>
-                </div>
-                <div class="coll-12 col-sm-12 col-md-6 col-xl-6">
-  <input type="radio" id="3" name="select1" value="3">
-  <p for="male" style="font-size: 17px;">Mucho más claro que mi piel</p>
-                </div>
-            </div>
-        </div>
-          <!--<p style="margin-top: 20px;">De estos vestidos, me pondría:</p>
-        <div class="container-fluid">
-  <div id="picker2" class="row">
-    <div id="image1" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Azul rey</p>
-    </div>
-    <div id="image2" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-      <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Rojo/ naranja</p>
-    </div>
-    <div id="image3" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Azul oscuro</p>
-    </div>
-      <div id="image4" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Rojo vino</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Negro</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Blanco</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Gris</p>
+      <div class="tab-pane fade" id="costo-just" role="tabpanel" aria-labelledby="costo-tab-just">
+       <p style="margin-top: 20px;">Estoy dispuesta a pagar por cada prenda (dólares):</p>
+          <br>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
+    <input type="radio" id="2" name="select1" value="2">
+    <p for="male" style="font-size: 17px;">Menos de $20</p>
+                  </div>
+                  <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
+    <input type="radio" id="1" name="precio" value="10-30">
+    <p for="male" style="font-size: 17px;">$10-$30</p>
+                  </div>
+                  <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
+    <input type="radio" id="2" name="precio" value="20-40">
+    <p for="male" style="font-size: 17px;">$20-$40</p>
+                  </div>
+                  <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
+    <input type="radio" id="3" name="precio" value="30-50">
+    <p for="male" style="font-size: 17px;">$30-$50</p>
+                  </div>
+                  <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
+    <input type="radio" id="3" name="precio" value="40-60">
+    <p for="male" style="font-size: 17px;">$40-$60</p>
+                  </div>
+                  <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
+    <input type="radio" id="3" name="precio" value="mas60">
+    <p for="male" style="font-size: 17px;">Más de $60</p>
+                  </div>
+              </div>
+          </div>
+          <br>
+                         <p style="margin-top: 20px;">Me gustaría recibir mi caja:</p>
+          <br>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
+    <input type="radio" id="2" name="tiempo" value="semanal">
+    <p for="male" style="font-size: 17px;">1 vez a la semana</p>
+                  </div>
+                  <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
+    <input type="radio" id="1" name="tiempo" value="2mes">
+    <p for="male" style="font-size: 17px;">2 veces al mes</p>
+                  </div>
+                  <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
+    <input type="radio" id="2" name="tiempo" value="mensual">
+    <p for="male" style="font-size: 17px;">1 vez al mes</p>
+                  </div>
+                  <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
+    <input type="radio" id="3" name="tiempo" value="4year">
+    <p for="male" style="font-size: 17px;">4 al año</p>
+                  </div>
+                  <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
+    <input type="radio" id="3" name="tiempo" value="2year">
+    <p for="male" style="font-size: 17px;">2 al año</p>
+                  </div>
+                  <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
+    <input type="radio" id="3" name="tiempo" value="1year">
+    <p for="male" style="font-size: 17px;">1 al año</p>
+                  </div>
+                  <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
+    <input type="radio" id="3" name="tiempo" value="una">
+    <p for="male" style="font-size: 17px;">Sólo por esta vez</p>
+                  </div>
+              </div>
+          </div>
+          <br>
+          <button type="submit" value="Continuar" style="margin-bottom: 30px;font-weight:500;padding: 5px;width: 110px;height: 48px; align-self: center;">Terminar</button>
     </div>
   </div>
-</div> -->
-  </div>
-    <div class="tab-pane fade" id="gusto-just" role="tabpanel" aria-labelledby="gusto-tab-just">
-  <!--  <p style="margin-top: 20px;">Los colores que más me gustan son:</p>
-        <div class="container-fluid">
-  <div id="picker" class="row">
-    <div id="image1" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEUAAP+KeNJXAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Azul</p>
-    </div>
-    <div id="image2" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-      <input type="image" src="https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/1245250/300/200/m1/fpc/wm0/jtyohxxxynzz2mwpz3t4osf9phgrkzi94ze9o3u9cbgilwbtqxjxo5h4atxtnmu3-.jpg?1462551410&s=f987cb4b9af6f2f02e65870edfdc4b6a" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Rojo</p>
-    </div>
-    <div id="image3" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://significadodeloscolores.info/wp-content/uploads/2014/08/color-amarillo.png" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Amarillo</p>
-    </div>
-      <div id="image4" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://biblioteca.acropolis.org/wp-content/uploads/2014/12/verde-1200x839.png" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Verde</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://cdn10.bigcommerce.com/s-raqyrv37/products/95/images/453/pink_colored_sand__83720.1454605049.1280.850.jpg?c=2" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Rosa</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://i.pinimg.com/originals/b7/83/49/b783496c9bb4f37355d99e4891b3c13a.png" height="194" width="259" alt="button" alt="button">
-        <br>
-        <p style="font-size: 17px;">Naranja</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/White_color_Page.jpg/450px-White_color_Page.jpg" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Blanco</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://upload.wikimedia.org/wikipedia/commons/5/50/Black_colour.jpg" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Negro</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://www.coverstyl.com/dpics/articles/2019-10-03-02-40-47_NE79_2.jpg" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Gris</p>
-    </div>
-  </div>
-</div>
-<br>
-        <p style="margin-top: 20px;">Los colores que menos me gustan son:</p>
-        <div class="container-fluid">
-  <div id="picker2" class="row">
-    <div id="image1" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEUAAP+KeNJXAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Azul</p>
-    </div>
-    <div id="image2" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-      <input type="image" src="https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/1245250/300/200/m1/fpc/wm0/jtyohxxxynzz2mwpz3t4osf9phgrkzi94ze9o3u9cbgilwbtqxjxo5h4atxtnmu3-.jpg?1462551410&s=f987cb4b9af6f2f02e65870edfdc4b6a" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Rojo</p>
-    </div>
-    <div id="image3" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://significadodeloscolores.info/wp-content/uploads/2014/08/color-amarillo.png" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Amarillo</p>
-    </div>
-      <div id="image4" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://biblioteca.acropolis.org/wp-content/uploads/2014/12/verde-1200x839.png" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Verde</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://cdn10.bigcommerce.com/s-raqyrv37/products/95/images/453/pink_colored_sand__83720.1454605049.1280.850.jpg?c=2" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Rosa</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://i.pinimg.com/originals/b7/83/49/b783496c9bb4f37355d99e4891b3c13a.png" height="194" width="259" alt="button" alt="button">
-        <br>
-        <p style="font-size: 17px;">Naranja</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/White_color_Page.jpg/450px-White_color_Page.jpg" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Blanco</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://upload.wikimedia.org/wikipedia/commons/5/50/Black_colour.jpg" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Negro</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://www.coverstyl.com/dpics/articles/2019-10-03-02-40-47_NE79_2.jpg" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Gris</p>
-    </div>
-  </div>
-</div>
-<br>
-          <p style="margin-top: 20px;">Los patrones que más me gustan son:</p>
-        <div class="container-fluid">
-  <div id="picker3" class="row">
-    <div id="image1" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://i.pinimg.com/originals/df/bc/1b/dfbc1b54d97039b02d8fd3c282931269.jpg" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Flores</p>
-    </div>
-    <div id="image2" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-      <input type="image" src="https://www.creativefabrica.com/wp-content/uploads/2019/11/25/Stripes_72_prev-1-580x386.jpg" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Rayas</p>
-    </div>
-    <div id="image3" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://www.atrafloor.com/app/uploads/2020/01/TE5011BL03F-Swatch.jpg" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Círculos</p>
-    </div>
-      <div id="image4" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://previews.123rf.com/images/barrirret/barrirret1807/barrirret180700014/105440820-pink-tartan-seamless-vector-patterns-checkered-plaid-texture-pink-and-gray-geometrical-simple-square.jpg" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Cuadrados</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://d1yn1kh78jj1rr.cloudfront.net/image/thumbnail/rDtN98Qoishumwih/pinklovepaper_06-091815-1150_thumb.jpg" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Animal</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://img.pixers.pics/pho_pat(s3:700/FO/16/54/41/74/7/700_FO165441747_6e81436a8ac6c0f3d6161149a57ca916.jpg,0.2381w,0.2381h,700,562,jpg)/washable-wallpapers-hand-drawn-vector-abstract-summer-time-fun-seamless-pattern-with-pink-flamingo-float-and-unicorn-swimming-pool-buoy-circle-isolated-on-pastel-background.jpg.jpg" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Divertido</p>
-    </div>
-  </div>
-</div>
-                  <p style="margin-top: 20px;">Los patrones que menos me gustan son:</p>
-        <div class="container-fluid">
-  <div id="picker4" class="row">
-    <div id="image1" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://i.pinimg.com/originals/df/bc/1b/dfbc1b54d97039b02d8fd3c282931269.jpg" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Flores</p>
-    </div>
-    <div id="image2" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-      <input type="image" src="https://www.creativefabrica.com/wp-content/uploads/2019/11/25/Stripes_72_prev-1-580x386.jpg" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Rayas</p>
-    </div>
-    <div id="image3" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://www.atrafloor.com/app/uploads/2020/01/TE5011BL03F-Swatch.jpg" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Círculos</p>
-    </div>
-      <div id="image4" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://previews.123rf.com/images/barrirret/barrirret1807/barrirret180700014/105440820-pink-tartan-seamless-vector-patterns-checkered-plaid-texture-pink-and-gray-geometrical-simple-square.jpg" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Cuadrados</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://d1yn1kh78jj1rr.cloudfront.net/image/thumbnail/rDtN98Qoishumwih/pinklovepaper_06-091815-1150_thumb.jpg" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Animal</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://img.pixers.pics/pho_pat(s3:700/FO/16/54/41/74/7/700_FO165441747_6e81436a8ac6c0f3d6161149a57ca916.jpg,0.2381w,0.2381h,700,562,jpg)/washable-wallpapers-hand-drawn-vector-abstract-summer-time-fun-seamless-pattern-with-pink-flamingo-float-and-unicorn-swimming-pool-buoy-circle-isolated-on-pastel-background.jpg.jpg" height="194" width="259" alt="button">
-        <br>
-        <p style="font-size: 17px;">Divertido</p>
-    </div>
-  </div>
-</div>
-                  <p style="margin-top: 20px;">Suelo vestir (elija con las que concuerde):</p>
-        <div class="container-fluid">
-  <div id="picker5" class="row">
-    <div id="image1" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
-     <input type="image" src="https://ae01.alicdn.com/kf/HTB1m7liavfsK1RjSszgq6yXzpXaR/autumn-sweaters-2020-winter-clothes-women-harajuku-korean-fashion-personality-retro-lazy-letter-knitted-oversized-sweater.jpg" height="194" width="194" alt="button">
-        <br>
-        <p style="font-size: 17px;">Cómoda</p>
-    </div>
-    <div id="image2" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
-      <input type="image" src="https://image.made-in-china.com/2f0j00GsatEqrcuvgi/Custom-Women-Blazer-Ladies-Formal-Clothing-of-Office-Wear.jpg" height="194" width="194" alt="button">
-        <br>
-        <p style="font-size: 17px;">Formal</p>
-    </div>
-    <div id="image3" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
-     <input type="image" src="https://sc02.alicdn.com/kf/H5a22b024cbd34c16843b6594165c4f9bz.jpg" height="194" width="194" alt="button">
-        <br>
-        <p style="font-size: 17px;">Deportiva</p>
-    </div>
-      <div id="image4" visited="0" class="col-12 col-sm-6 col-md-4 col-xl-3">
-     <input type="image" src="https://images-na.ssl-images-amazon.com/images/I/51aa1oFUf9L._SY355_.jpg" height="194" width="194" alt="button">
-        <br>
-        <p style="font-size: 17px;">De noche</p>
-    </div>
-  </div>
-</div>
-        <br>
-                  <p style="margin-top: 20px;">Me gustaría resaltar mis:</p>
-        <div class="container-fluid">
-  <div id="picker6" class="row">
-    <div id="image1" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Brazos</p>
-    </div>
-    <div id="image2" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-      <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Piernas</p>
-    </div>
-    <div id="image3" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Busto</p>
-    </div>
-      <div id="image4" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Cintura</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Caderas</p>
-    </div>
-      <div id="image5" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Hombros/ cuello</p>
-    </div>
-  </div>
-</div>
-         <br>
-                          <p style="margin-top: 20px;">Mi estilo personal es:</p>
-        <div class="container-fluid">
-  <div id="picker7" class="row">
-    <div id="image1" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://i.etsystatic.com/11631726/r/il/5717ee/1607117738/il_570xN.1607117738_sa9f.jpg" height="194" width="194" alt="button">
-        <br>
-        <p style="font-size: 17px;">Rock</p>
-    </div>
-    <div id="image2" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-      <input type="image" src="https://www.dhresource.com/0x0/f2/albu/g10/M01/C1/65/rBVaWVzvdqCAJ3jeAAK0bNKvKtA771.jpg" height="194" width="194" alt="button">
-        <br>
-        <p style="font-size: 17px;">Elegante</p>
-    </div>
-    <div id="image3" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://media.karousell.com/media/photos/products/2019/08/22/pleat_skirt_aa_style_kawaii_cute_sweet_school_uniform_cosplay_skirt_japanese_japan_jpop_embroidery_e_1566405235_1598ddc2_progressive.jpg" height="194" width="194" alt="button">
-        <br>
-        <p style="font-size: 17px;">Tierno</p>
-    </div>
-      <div id="image4" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://ih1.redbubble.net/image.478161167.3003/ssrco,unisex_tshirt,womens,101010:01c5ca27c6,front,square_product,x600-bg,f8f8f8.u3.jpg" height="194" width="194" alt="button">
-        <br>
-        <p style="font-size: 17px;">Sencillo</p>
-    </div>
-      <div id="image4" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/top-lencero-mango-barato-looks-minimal-1590244263.jpg?crop=0.437xw:0.313xh;0.277xw,0.294xh&resize=480:*" height="194" width="194" alt="button">
-        <br>
-        <p style="font-size: 17px;">Minimalista</p>
-    </div>
-      <div id="image4" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://cdn.shopify.com/s/files/1/0028/4560/5988/products/HIRIGIN-Hippie-Boho-Women-Summer-Beach-Swimsuit-Swimwear-Bikini-Cover-ups-Bathing-Clothes.jpg?v=1583205946" height="194" width="194" alt="button">
-        <br>
-        <p style="font-size: 17px;">Relajado/ hippie</p>
-    </div>
-  </div>
-</div>
-        <br>
-                          <p style="margin-top: 20px;">Me gusta que mis pantalones:</p>
-        <div class="container-fluid">
-  <div id="picker8" class="row">
-    <div id="image1" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Me cubran los tobillos</p>
-    </div>
-    <div id="image2" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-      <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Estén a la mitad de los tobillos</p>
-    </div>
-    <div id="image3" visited="0" class="col-12 col-sm-12 col-md-6 col-xl-4">
-     <input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKDxSy3xU2O-qEB-6KKxdVOwibI-fvA_IpSoSgGnwRVww4bvWf" alt="button">
-        <br>
-        <p style="font-size: 17px;">Estén arriba de mis tobillos</p>
-    </div>
-  </div>
-</div>-->
-  </div>
-    <div class="tab-pane fade" id="costo-just" role="tabpanel" aria-labelledby="costo-tab-just">
-     <p style="margin-top: 20px;">Estoy dispuesta a pagar por cada prenda (dólares):</p>
-        <br>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
-  <input type="radio" id="2" name="select1" value="2">
-  <p for="male" style="font-size: 17px;">Menos de $20</p>
-                </div>
-                <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
-  <input type="radio" id="1" name="selec1" value="1">
-  <p for="male" style="font-size: 17px;">$10-$30</p>
-                </div>
-                <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
-  <input type="radio" id="2" name="select1" value="2">
-  <p for="male" style="font-size: 17px;">$20-$40</p>
-                </div>
-                <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
-  <input type="radio" id="3" name="select1" value="3">
-  <p for="male" style="font-size: 17px;">$30-$50</p>
-                </div>
-                <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
-  <input type="radio" id="3" name="select1" value="3">
-  <p for="male" style="font-size: 17px;">$40-$60</p>
-                </div>
-                <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
-  <input type="radio" id="3" name="select1" value="3">
-  <p for="male" style="font-size: 17px;">Más de $60</p>
-                </div>
-            </div>
-        </div>
-        <br>
-                       <p style="margin-top: 20px;">Me gustaría recibir mi caja:</p>
-        <br>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
-  <input type="radio" id="2" name="select1" value="2">
-  <p for="male" style="font-size: 17px;">1 vez a la semana</p>
-                </div>
-                <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
-  <input type="radio" id="1" name="selec1" value="1">
-  <p for="male" style="font-size: 17px;">2 veces al mes</p>
-                </div>
-                <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
-  <input type="radio" id="2" name="select1" value="2">
-  <p for="male" style="font-size: 17px;">1 vez al mes</p>
-                </div>
-                <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
-  <input type="radio" id="3" name="select1" value="3">
-  <p for="male" style="font-size: 17px;">4 al año</p>
-                </div>
-                <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
-  <input type="radio" id="3" name="select1" value="3">
-  <p for="male" style="font-size: 17px;">2 al año</p>
-                </div>
-                <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
-  <input type="radio" id="3" name="select1" value="3">
-  <p for="male" style="font-size: 17px;">1 al año</p>
-                </div>
-                <div class="coll-12 col-sm-6 col-md-4 col-xl-3">
-  <input type="radio" id="3" name="select1" value="3">
-  <p for="male" style="font-size: 17px;">Sólo por esta vez</p>
-                </div>
-            </div>
-        </div>
-        <br>
-         <button type="submit" value="Continuar" style="margin-bottom: 30px;font-weight:500;padding: 5px;width: 110px;height: 48px; align-self: center;">Terminar</button>
-  </div>
-  <input type="button" value="Regresar Arriba" id="myBtn" onclick="topFunction()">
-  <!--<button onclick="topFunction()" id="myBtn" title="Regresar">Regresar Arriba</button>-->
   <br>
-</div>
-</form>
-</div>
+  <input type="button" value="Regresar Arriba" id="myBtn" onclick="topFunction()">
+
+  </form>
+  </div>
+       <style>
+      /* CONTAINERS */
+
+  #dynamicContentDiv #contenedor {max-width: 850px; width: 100%; margin: 0 auto;}
+  #dynamicContentDiv .four { width: 230px;}
+
+
+
+  /* COLUMNS */
+
+  #dynamicContentDiv .coll {
+    display: block;
+    float:left;
+    margin: 1% 0 1% 1.6%;
+  }
+
+  #dynamicContentDiv .coll:first-of-type { margin-left: 0; }
+
+  /* CLEARFIX */
+
+  #dynamicContentDiv .cf:before,
+  #dynamicContentDiv .cf:after {
+      content: " ";
+      display: table;
+  }
+
+  #dynamicContentDiv .cf:after {
+      clear: both;
+  }
+
+  #dynamicContentDiv .cf {
+      *zoom: 1;
+  }
+
+  /* FORM */
+
+  #dynamicContentDiv .form input{
+    display: none;
+  }
+
+  #dynamicContentDiv .form label{
+    position: relative;
+    color: #3f3f40;
+    background-color: #f5f6f7;
+    font-size: 30px;
+      font-weight: 500;
+    text-align: center;
+    height: 200px;
+    line-height: 200px;
+    display: block;
+    cursor: pointer;
+    border: 3px solid transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+      border-radius: 10px;
+      margin: 10px;
+  }
+
+  #dynamicContentDiv .form input:checked + label{
+    border: 5px solid #b5ebec;
+  }
+
+  #dynamicContentDiv .form input:checked + label:after{
+    content: "\2713";
+      color: #f5f6f7;
+      font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 35px;
+    border-radius: 100%;
+    border: 2px solid #b5ebec;
+    background-color: #b5ebec;
+    z-index: 999;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+  }
+
+      </style>
   </body>
 <%- include('partials/_footer') -%>
 </html>

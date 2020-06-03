@@ -1,0 +1,151 @@
+<%- include('partials/_header') -%>
+<body>
+  <section>
+    <div class="container">
+        <div class="py-5 text-center">
+
+          <h2>Checkout</h2>
+          <p class="lead">Ya falta poco para terminar tu compra, sólo tienes que llenar los datos requeridos.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 order-md-2 mb-4">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              <span class="text-muted">Resumen de la compra</span>
+             <!--- <span class="badge badge-secondary badge-pill">3</span> NÚMERO A LADO DE TEXTO-->
+            </h4>
+            <ul class="list-group mb-3">
+              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                  <h6 class="my-0">Suscripción de tres meses</h6><!--que cambie según lo que haya elegido-->
+                  <small class="text-muted">Caja de suscripción personalizada</small>
+                </div>
+                <span class="text-muted">$500</span><!--que cambie según lo que haya elegido-->
+              </li>
+              <!--<li class="list-group-item d-flex justify-content-between bg-light">
+                <div class="text-success">
+                  <h6 class="my-0">Cupón</h6>
+                  <small>EXAMPLECODE</small>
+                </div>
+                <span class="text-success">-$20</span>
+              </li> -->
+              <li class="list-group-item d-flex justify-content-between">
+                <span>Total (MXN)</span>
+                <strong>$500</strong><!--que cambie según lo que haya elegido-->
+              </li>
+            </ul>
+
+            <form class="card p-2">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Cupón">
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-secondary">Canjear</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">Información de envío</h4>
+
+            <form class="needs-validation" novalidate action="/check" method="POST"> 
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="firstName">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" placeholder="" value="" name="nombre" required>
+                  <div class="invalid-feedback">
+                    Ingresa tu nombre.
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="lastName">Apellido(s)</label>
+                  <input type="text" class="form-control" id="apellido" placeholder="" value="" name="apellido" required>
+                  <div class="invalid-feedback">
+                    Ingresa tu(s) apellido(s).
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="email">Correo</label>
+
+                  <input type="text" class="form-control" id="email" placeholder="Correo de usuario" name="email" required>
+                  <div class="invalid-feedback" style="width: 100%;">
+                    Tu correo es obligatorio.
+                  </div>
+              </div>
+
+
+              <div class="row">
+                <div class="col-md-5 mb-3">
+                  <label for="country">País</label>
+                  <select class="custom-select d-block w-100" id="pais" name="pais" required>
+                    <option>Selecciona...</option>
+                    <option>México</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Por favor selecciona un país válido.
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="state">Estado</label>
+                  <select class="custom-select d-block w-100" id="state" name="estado" required>
+                    <option>Selecciona...</option>
+                    <option>Baja California</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Por favor selecciona un estado válido.
+                  </div>
+                </div>
+              </div>
+                <div class="row">
+                <div class="col-md-5 mb-3">
+                  <label for="ciudad">Ciudad</label>
+                  <input type="text" class="form-control" id="ciudad" placeholder="" name="ciudad" required>
+                  <div class="invalid-feedback">
+                    Ingresa tu ciudad.
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="zip">CP</label>
+                  <input type="text" class="form-control" id="zip" placeholder="" name="cp" required>
+                  <div class="invalid-feedback">
+                    Ingresa tu código postal.
+                  </div>
+                </div>
+              </div>
+              <hr class="mb-4">
+
+              <h4 class="mb-3">Pago</h4>
+
+              <hr class="mb-4">
+              <%if(locals.check==false){%><button class="login100-form-btn" type="submit">Proceder a pagar</button>
+              <%}
+              else{%><button class="login100-form-btn" type="submit" disabled>Proceder a pagar</button><%}%>
+            </form>
+            <br>
+            <%if(locals.check==true){%>
+            <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_xclick">
+              <input type="hidden" name="item_name" value="Order#21874">
+              <input type="hidden" name="amount" value="500">
+              <input type="hidden" name="business" value="sb-9elyu1924567@business.example.com">
+              <input type="hidden" name="lc" value="MX">
+
+              <input type="hidden" name="shipping" value="10.00">
+              <input type="hidden" name="currency_code" value="MXN">
+              <input type="hidden" name="button_subtype" value="services">
+              <input type="hidden" name="no_note" value="0">
+              <!-- <input type="hidden" name="return" value="http://localhost:3000/cart/response/success" />
+              <input type="hidden" name="cancel_return" value="http://localhost:3000/cart/response/cancel" /> -->
+              <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_SM.gif:NonHostedGuest">
+              <input type="image" src="imagenes/paypal.png" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+              <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+              </form>
+              <%}%>
+          </div>
+        </div>
+      </div>
+    </section>
+      </body>
+<%- include('partials/_footer') -%>
+</html>

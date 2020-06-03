@@ -10,7 +10,12 @@
         <div class="row">
           <div class="col-12 col-sm-12 col-md-12 col-xl-12">
             <a href="index.html" id="logo">portada</a>
+            <%if(locals.auth==false){%>
             <a href="iniciarsesion.html" id="is">Iniciar Sesión</a>
+            <%}
+            else{%>
+              <a href="index.html/signout" id="is">Cerrar Sesión</a>
+            <%}%>
           </div>
         </div>
       </div>

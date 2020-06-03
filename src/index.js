@@ -9,6 +9,8 @@ const app = express();
 const session = require('express-session');
 //https://www.npmjs.com/package/express-mysql-session
 const MySQLTest = require('express-mysql-session')(session);
+//https://github.com/visionmedia/express-messages
+var flash = require('connect-flash');
 
 const dbCon={
     host: 'localhost',
@@ -39,6 +41,25 @@ app.use(session({
 app.use(function(req, res, next) {
     res.locals.test = req.session.test; //utilizar la información del carrito en toda la navegación
     console.log(res.locals.test)
+    next();
+  });
+
+app.use(flash());
+app.use(function (req, res, next) {
+    res.locals.messages = require('express-messages')(req, res); //mensajes que quisieramos mostrar
+    console.log(res.locals.messages);
+    next();
+});
+
+app.use(function(req, res, next) {
+    res.locals.auth = req.session.auth; //utilizar la información del carrito en toda la navegación
+    console.log(res.locals.auth);
+    next();
+  });
+
+app.use(function(req, res, next) {
+    res.locals.check = req.session.check; //utilizar la información del carrito en toda la navegación
+    console.log(res.locals.check);
     next();
   });
 

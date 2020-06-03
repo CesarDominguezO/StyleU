@@ -1,6 +1,7 @@
 const controller = {};
 
 controller.list = (req, res) =>{
+    req.session.check=false;
     res.render('registro.html', {
         title: 'StyleU'
     });
@@ -17,7 +18,7 @@ controller.reg = (req, res) =>{
 controller.reg = (req, res) =>{
     const data =req.body;
     req.getConnection((err, conn) =>{
-        var query=conn.query('INSERT INTO registro set ?', [data], (err, test) =>{
+        var query=conn.query('INSERT INTO usuario set ?', [data], (err, test) =>{
             console.log(query.sql);
             if(err){
                 res.json(err);

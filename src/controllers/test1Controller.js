@@ -1,6 +1,7 @@
 const controller = {};
 
 controller.list = (req, res) =>{
+    req.session.check=false;
     res.render('test1.html', {
         title: 'StyleU'
     });
