@@ -3,7 +3,7 @@ const controller = {};
 controller.list = (req, res) =>{
     req.session.check=false;
     req.session.dev=false;
-    res.render('promo.html', {
+    res.render('terminos.html', {
         title: 'StyleU'
     });
 

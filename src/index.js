@@ -63,6 +63,18 @@ app.use(function(req, res, next) {
     next();
   });
 
+  app.use(function(req, res, next) {
+    res.locals.dev = req.session.dev; //utilizar la información del carrito en toda la navegación
+    console.log(res.locals.dev);
+    next();
+  });
+
+  app.use(function(req, res, next) {
+    res.locals.cantidad = req.session.cantidad; //utilizar la información del carrito en toda la navegación
+    console.log(res.locals.cantidad);
+    next();
+  });
+
 //Para entender datos de los formularios
 app.use(express.urlencoded({extended:false}));
 

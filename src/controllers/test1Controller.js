@@ -2,6 +2,7 @@ const controller = {};
 
 controller.list = (req, res) =>{
     req.session.check=false;
+    req.session.dev=false;
     res.render('test1.html', {
         title: 'StyleU'
     });
@@ -28,7 +29,7 @@ controller.test = (req, res) =>{
             }
             //console.log(test);
             //res.send('works!');
-            res.redirect('/');
+            res.redirect('/continuar.html');
         });
     });
 };*/

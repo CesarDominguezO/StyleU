@@ -27,6 +27,10 @@ router.get('/regaloof.html', regaloofController.list);
 const continuarController = require('../controllers/continuarController');
 router.get('/continuar.html', continuarController.list);
 
+const devolucionesController = require('../controllers/devolucionesController');
+router.get('/devoluciones.html', devolucionesController.list);
+router.post('/cantidad', devolucionesController.cantidad);
+
 const enviadoController = require('../controllers/enviadoController');
 router.get('/enviado.html', enviadoController.list);
 
@@ -40,3 +44,9 @@ router.post('/test/save', test1Controller.test);
 const registroController = require('../controllers/registroController');
 router.get('/registro.html', registroController.list);
 router.post('/reg/save', registroController.reg);
+
+const terminosController = require('../controllers/terminosController');
+router.get('/terminos.html', terminosController.list);
+
+const privacidadController = require('../controllers/privacidadController');
+router.get('/privacidad.html', privacidadController.list);

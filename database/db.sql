@@ -75,6 +75,7 @@ CREATE TABLE USUARIO(
     num CHAR(10),
     col VARCHAR(10),
     cp CHAR(5),
+    cant VARCHAR(2);
     ide INT(8),
     idt INT(8),
     PRIMARY KEY (email),
@@ -100,11 +101,3 @@ CREATE TABLE COMPRAN(
     FOREIGN KEY (codigo) REFERENCES PRENDA(codigo)
 );
 ALTER TABLE COMPRAN ADD UNIQUE INDEX(idc);
-
-CREATE TABLE REGISTRO(
-    email VARCHAR(30) NOT NULL,
-    nombre VARCHAR(10) NOT NULL,
-    apellido VARCHAR(10) NOT NULL,
-    contra VARCHAR(8) NOT NULL,
-    PRIMARY KEY (email)
-);

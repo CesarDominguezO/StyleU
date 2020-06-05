@@ -1,0 +1,210 @@
+<%- include('partials/_header') -%>
+<body style="background-color: #f5f6f7">
+  <section>
+    <div class="container">
+        <div class="py-5 text-center">
+          
+          <h2>Pago y Devoluciones</h2>
+          <p class="lead">Puede que hayas encontrado artículos en tu caja que no sean de tu agrado, sólo paga tus favoritos y devuele el resto. Esto nos ayuda a nosotros a entender mejor tus gustos personales.</p>
+        </div>
+      
+        <div class="row">
+          <div class="col-md-4 order-md-2 mb-4">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              <span class="text-muted">Resumen de la compra</span>
+             <!--- <span class="badge badge-secondary badge-pill">3</span> NÚMERO A LADO DE TEXTO-->
+            </h4>
+            <ul class="list-group mb-3">
+              <li class="list-group-item d-flex justify-content-between lh-condensed" style="background-color:#f5f6f7">
+                <div>
+                  <h6 class="my-0">Cantidad de artículos</h6><!--que cambie según lo que haya elegido-->
+                </div>
+                <span id="cantidad" value="10"></span><!--que cambie según lo que haya elegido-->
+              </li>
+              <!--<li class="list-group-item d-flex justify-content-between bg-light">
+                <div class="text-success">
+                  <h6 class="my-0">Cupón</h6>
+                  <small>EXAMPLECODE</small>
+                </div>
+                <span class="text-success">-$20</span>
+              </li> -->
+              <li class="list-group-item d-flex justify-content-between" style="background-color: #f5f6f7">
+                <span>Total (USD) $</span>
+                <strong id="cobro"></strong><!--que cambie según lo que haya elegido-->
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">Selecciona cuántos artículos te quedarás</h4>
+            <form class="needs-validation" novalidate method="post" action="cantidad">
+             
+              <div class="row">
+                                <div class="col-md-5 mb-3">
+                  <label for="country">Cantidad</label>
+                    <div class="wrap-input100" style="height: 40px;">
+                  <select class="custom-select d-block w-100 input100" required style="height: 40px;" id="cant" name="cant" onchange="updateTotal2()">
+                    <option value="0">Selecciona...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                         <span class="focus-input100" style="height: 44px;"></span>
+                        </div>
+                  <div class="invalid-feedback">
+                    Por favor selecciona un número válido.
+                  </div>
+                </div>
+                </div>
+              <hr class="mb-4">
+      
+              <h4 class="mb-3">Pago</h4>
+      
+              <hr class="mb-4">
+          <script>
+      function updateTotal() {
+    var check=document.getElementById("cupon").value == "12345";
+          var ddl = document.getElementById("cant");
+    var selectedValue = ddl.options[ddl.selectedIndex].value;
+          var cobro = document.getElementById("cobro").value;
+        if(!check)
+        {
+        document.getElementById("cobro").innerHTML = (parseInt(selectedValue, 10)*(200/10));//el 200 debe cambiar según la variable precio en la base de datos
+        }
+          if(check)
+        {
+             document.getElementById("cobro").innerHTML = (parseInt(selectedValue, 10)*(200/10)) - 20;//el 200 debe cambiar según la variable precio en la base de datos
+        }
+          }
+        document.getElementById("cobro").value = updateTotal();
+         function updateTotal2() { 
+    var ddl = document.getElementById("cant");
+    var selectedValue = ddl.options[ddl.selectedIndex].value;
+    var cobro = document.getElementById("cobro");
+            document.getElementById("cantidad").innerHTML = selectedValue;
+             var r = (parseInt(selectedValue, 10)*(200/10));//el 200 debe cambiar según la variable precio en la base de datos
+             document.getElementsByName("amount").innerHTML = r;
+             document.getElementById("cobro").innerHTML = r;
+            }
+         document.getElementById("cantidad").value = updateTotal2();
+    </script>
+    
+    
+    <%if(locals.dev==false){%><button class="login100-form-btn" type="submit">Proceder a pagar</button>
+    <%}
+    else{%><button class="login100-form-btn" type="submit" disabled>Proceder a pagar</button><%}%>
+            <br>
+              </form>
+              <%if(locals.dev==true){%>
+              <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top" id="paypal">
+             
+                <input type="hidden" name="cmd" value="_xclick">
+                        <input type="hidden" name="item_name" value="Order#21874">
+                        <%
+                        if (locals.cantidad==1){%>
+                        <input type="hidden" name="amount" value="20"><!--cambiar según costo-->
+                        <%}
+                        else{
+                        if (locals.cantidad==2){%>
+                          <input type="hidden" name="amount" value="40">
+                          <%}
+                          else{
+                          if (locals.cantidad==3){%>
+                            <input type="hidden" name="amount" value="60">
+                            <%}
+                            else{
+                        if (locals.cantidad==4){%>
+                          <input type="hidden" name="amount" value="80">
+                          <%}
+                          else{
+                        if (locals.cantidad==5){%>
+                          <input type="hidden" name="amount" value="100">
+                          <%}
+                          else{
+                        if (locals.cantidad==6){%>
+                          <input type="hidden" name="amount" value="120">
+                          <%}
+                          else{
+                        if (locals.cantidad==7){%>
+                          <input type="hidden" name="amount" value="140">
+                          <%}
+                          else{
+                        if (locals.cantidad==8){%>
+                          <input type="hidden" name="amount" value="160">
+                          <%}
+                          else{
+                        if (locals.cantidad==9){%>
+                          <input type="hidden" name="amount" value="180">
+                          <%}
+                          else{
+                        if (locals.cantidad==10){%>
+                          <input type="hidden" name="amount" value="200">
+                          <%}}}}}}}}}}%>
+                        <input type="hidden" name="business" value="sb-9elyu1924567@business.example.com">
+                        <input type="hidden" name="lc" value="US">
+          
+                        <input type="hidden" name="shipping" value="1.00">
+                        <input type="hidden" name="currency_code" value="USD">
+                        <input type="hidden" name="button_subtype" value="services">
+                        <input type="hidden" name="no_note" value="0">
+                        <!-- <input type="hidden" name="return" value="http://localhost:3000/cart/response/success" />
+                        <input type="hidden" name="cancel_return" value="http://localhost:3000/cart/response/cancel" /> -->
+                        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_SM.gif:NonHostedGuest">
+                        
+                        <input type="image" src="imagenes/paypal.png" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea." style="margin: 10px; margin-bottom: 25px">
+                      
+                        <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+                      
+                      </form>
+                      <%}%>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <style>
+    @import url('href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;500&display=swap" rel="stylesheet"');
+    </style>
+</body>
+<%- include('partials/_footer') -%>
+</html>

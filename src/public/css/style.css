@@ -12,7 +12,7 @@ body{
 	left: 0;
 	right: 0;
 	background-color: rgba(255, 188, 187, 1);
-	z-index: 1;
+	z-index: 5;
 
 }
 
@@ -577,7 +577,7 @@ https://flickity.metafizzy.co
 /* fix blank or flashing items on carousel */
 .owl-carousel .item {
   position: relative;
-  z-index: 100;
+  z-index: 3;
 }
 
 /* end fix */
@@ -3974,7 +3974,7 @@ iframe {
   display: none; /* Hidden by default */
   bottom: 20px; /* Place the button at the bottom of the page */
   right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
+  z-index: 2; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
   background-color: #FFBCBB; /* Set a background color */
@@ -3988,4 +3988,16 @@ iframe {
 
 #myBtn:hover {
   background-color: #555; /* Add a dark-grey background on hover */
+}
+
+textarea.input100 {
+  min-height: 162px;
+  padding-top: 22px;
+  padding-bottom: 15px;
+}
+
+.nav-tabs .nav-link.active {
+  color: #f5f6f7;
+  background-color: #bf8c8c;
+  border-color: #bf8c8c;
 }

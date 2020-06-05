@@ -3,11 +3,11 @@
   <section>
     <div class="container">
         <div class="py-5 text-center">
-
+          
           <h2>Checkout</h2>
           <p class="lead">Ya falta poco para terminar tu compra, sólo tienes que llenar los datos requeridos.</p>
         </div>
-
+      
         <div class="row">
           <div class="col-md-4 order-md-2 mb-4">
             <h4 class="d-flex justify-content-between align-items-center mb-3">
@@ -15,12 +15,12 @@
              <!--- <span class="badge badge-secondary badge-pill">3</span> NÚMERO A LADO DE TEXTO-->
             </h4>
             <ul class="list-group mb-3">
-              <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <li class="list-group-item d-flex justify-content-between lh-condensed" style="background-color:#f5f6f7">
                 <div>
-                  <h6 class="my-0">Suscripción de tres meses</h6><!--que cambie según lo que haya elegido-->
+                  <h6 class="my-0">Caja con 10 artículos</h6><!--que cambie según lo que haya elegido-->
                   <small class="text-muted">Caja de suscripción personalizada</small>
                 </div>
-                <span class="text-muted">$500</span><!--que cambie según lo que haya elegido-->
+                <span class="text-muted">$15</span><!--que cambie según lo que haya elegido-->
               </li>
               <!--<li class="list-group-item d-flex justify-content-between bg-light">
                 <div class="text-success">
@@ -29,101 +29,145 @@
                 </div>
                 <span class="text-success">-$20</span>
               </li> -->
-              <li class="list-group-item d-flex justify-content-between">
-                <span>Total (MXN)</span>
-                <strong>$500</strong><!--que cambie según lo que haya elegido-->
+              <li class="list-group-item d-flex justify-content-between" style="background-color:#f5f6f7">
+                <span>Total (USD)</span>
+                <strong id="cobro" value="15" ></strong><!--que cambie según lo que haya elegido-->
               </li>
             </ul>
-
-            <form class="card p-2">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Cupón">
-                <div class="input-group-append">
-                  <button type="submit" class="btn btn-secondary">Canjear</button>
-                </div>
-              </div>
-            </form>
+      
           </div>
           <div class="col-md-8 order-md-1">
             <h4 class="mb-3">Información de envío</h4>
-
-            <form class="needs-validation" novalidate action="/check" method="POST"> 
+            <form class="needs-validation" novalidate method="post" action="check">
               <div class="row">
                 <div class="col-md-6 mb-3">
                   <label for="firstName">Nombre</label>
-                  <input type="text" class="form-control" id="nombre" placeholder="" value="" name="nombre" required>
+                    <div class="wrap-input100" style="height: 40px;">
+                  <input type="text" class="form-control input100" id="nombre" placeholder="" value="" name="nombre" required style="height: 40px;">
+                     <span class="focus-input100" style="height: 44px;"></span>
+                        </div>
                   <div class="invalid-feedback">
                     Ingresa tu nombre.
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
                   <label for="lastName">Apellido(s)</label>
-                  <input type="text" class="form-control" id="apellido" placeholder="" value="" name="apellido" required>
+                    <div class="wrap-input100" style="height: 40px;">
+                  <input type="text" class="form-control input100" id="apellido" placeholder="" value="" name="apellido" required style="height: 40px;">
+                        <span class="focus-input100" style="height: 44px;"></span>
+                        </div>
                   <div class="invalid-feedback">
                     Ingresa tu(s) apellido(s).
                   </div>
                 </div>
               </div>
-
+      
               <div class="mb-3">
                 <label for="email">Correo</label>
-
-                  <input type="text" class="form-control" id="email" placeholder="Correo de usuario" name="email" required>
+                <div class="wrap-input100" style="height: 40px;">
+                  <input type="text" class="form-control input100" id="email" placeholder="Correo de usuario" name="email" required style="height: 40px;">
+                      <span class="focus-input100" style="height: 44px;"></span>
+                        </div>
                   <div class="invalid-feedback" style="width: 100%;">
                     Tu correo es obligatorio.
                   </div>
               </div>
-
-
+      
+      
               <div class="row">
                 <div class="col-md-5 mb-3">
                   <label for="country">País</label>
-                  <select class="custom-select d-block w-100" id="pais" name="pais" required>
-                    <option>Selecciona...</option>
+                    <div class="wrap-input100" style="height: 40px;">
+                  <select class="custom-select d-block w-100 input100" id="pais" required style="height: 40px;" name="pais">
+                    <option value="">Selecciona...</option>
                     <option>México</option>
                   </select>
+                         <span class="focus-input100" style="height: 44px;"></span>
+                        </div>
                   <div class="invalid-feedback">
                     Por favor selecciona un país válido.
                   </div>
                 </div>
                 <div class="col-md-4 mb-3">
                   <label for="state">Estado</label>
-                  <select class="custom-select d-block w-100" id="state" name="estado" required>
-                    <option>Selecciona...</option>
+                      <div class="wrap-input100" style="height: 40px;">
+                  <select class="custom-select d-block w-100 input100" id="state" required style="height: 40px;" name="estado">
+                    <option value="">Selecciona...</option>
                     <option>Baja California</option>
                   </select>
+                           <span class="focus-input100" style="height: 44px;"></span>
+                        </div>
                   <div class="invalid-feedback">
                     Por favor selecciona un estado válido.
                   </div>
                 </div>
-              </div>
-                <div class="row">
-                <div class="col-md-5 mb-3">
+                   <div class="col-md-3 mb-3">
                   <label for="ciudad">Ciudad</label>
-                  <input type="text" class="form-control" id="ciudad" placeholder="" name="ciudad" required>
+                       <div class="wrap-input100" style="height: 40px;">
+                  <input type="text" class="form-control input100" id="ciudad" placeholder="" name="ciudad" required style="height: 40px;">
+                           <span class="focus-input100" style="height: 44px;"></span>
+                        </div>
                   <div class="invalid-feedback">
                     Ingresa tu ciudad.
                   </div>
                 </div>
+              </div>
+                <div class="row">
                 <div class="col-md-4 mb-3">
+                  <label for="ciudad">Colonia</label>
+                     <div class="wrap-input100" style="height: 40px;">
+                  <input type="text" class="form-control input100" id="colonia" placeholder="" name="col" required style="height: 40px;">
+                           <span class="focus-input100" style="height: 44px;"></span>
+                        </div>
+                  <div class="invalid-feedback">
+                    Ingresa tu colonia.
+                  </div>
+                </div>
+                    <div class="col-md-4 mb-3">
+                  <label for="ciudad">Calle</label>
+                         <div class="wrap-input100" style="height: 40px;">
+                  <input type="text" class="form-control input100" id="calle" placeholder="" name="calle" required style="height: 40px;">
+                               <span class="focus-input100" style="height: 44px;"></span>
+                        </div>
+                  <div class="invalid-feedback">
+                    Ingresa tu calle.
+                  </div>
+                </div>
+                    <div class="col-md-2 mb-3">
+                  <label for="ciudad">Número</label>
+                        <div class="wrap-input100" style="height: 40px;">
+                  <input type="text" class="form-control input100" id="numero" placeholder="" name="num" required style="height: 40px;">
+                            <span class="focus-input100" style="height: 44px;"></span>
+                        </div>
+                  <div class="invalid-feedback">
+                    Ingresa tu número de casa.
+                  </div>
+                </div>
+                <div class="col-md-2 mb-3">
                   <label for="zip">CP</label>
-                  <input type="text" class="form-control" id="zip" placeholder="" name="cp" required>
+                     <div class="wrap-input100" style="height: 40px;">
+                  <input type="text" class="form-control input100" id="zip" placeholder="" name="cp" required style="height: 40px;">
+                         <span class="focus-input100" style="height: 44px;"></span>
+                        </div>
                   <div class="invalid-feedback">
                     Ingresa tu código postal.
                   </div>
                 </div>
               </div>
+              
               <hr class="mb-4">
-
+      
               <h4 class="mb-3">Pago</h4>
-
+      
               <hr class="mb-4">
               <%if(locals.check==false){%><button class="login100-form-btn" type="submit">Proceder a pagar</button>
               <%}
               else{%><button class="login100-form-btn" type="submit" disabled>Proceder a pagar</button><%}%>
+              
+                
             </form>
             <br>
-            <%if(locals.check==true){%>
+           <%if(locals.check==true){%>
             <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
               <input type="hidden" name="cmd" value="_xclick">
               <input type="hidden" name="item_name" value="Order#21874">
@@ -141,6 +185,7 @@
               <input type="image" src="imagenes/paypal.png" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
               <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
               </form>
+              <br>
               <%}%>
           </div>
         </div>
