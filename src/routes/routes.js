@@ -50,3 +50,12 @@ router.get('/terminos.html', terminosController.list);
 
 const privacidadController = require('../controllers/privacidadController');
 router.get('/privacidad.html', privacidadController.list);
+
+const contactoController = require('../controllers/contactoController');
+router.get('/contacto.html', contactoController.list);
+
+const promoController = require('../controllers/promoController');
+router.get('/promo.html', promoController.list);
+
+const faqController = require('../controllers/faqController');
+router.get('/faq.html', faqController.list);
