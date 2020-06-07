@@ -97,9 +97,9 @@
     
     
     <%if(locals.dev==false){%><button class="login100-form-btn" type="submit">Proceder a pagar</button>
+    <br>
     <%}
-    else{%><button class="login100-form-btn" type="submit" disabled>Proceder a pagar</button><%}%>
-            <br>
+    else{}%>
               </form>
               <%if(locals.dev==true){%>
               <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top" id="paypal">
@@ -153,8 +153,8 @@
                         <input type="hidden" name="currency_code" value="USD">
                         <input type="hidden" name="button_subtype" value="services">
                         <input type="hidden" name="no_note" value="0">
-                        <!-- <input type="hidden" name="return" value="http://localhost:3000/cart/response/success" />
-                        <input type="hidden" name="cancel_return" value="http://localhost:3000/cart/response/cancel" /> -->
+                        <input type="hidden" name="return" value="http://localhost:3000/enviado.html"/>
+                        <input type="hidden" name="cancel_return" value="http://localhost:3000/cancelar.html"/>
                         <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_SM.gif:NonHostedGuest">
                         
                         <input type="image" src="imagenes/paypal.png" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea." style="margin: 10px; margin-bottom: 25px">

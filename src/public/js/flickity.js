@@ -3966,6 +3966,7 @@ return Flickity;
       './flickity',
       './drag',
       './prev-next-button',
+      './page-dots',
       './player',
       './add-remove-cell',
       './lazyload'
@@ -3976,6 +3977,7 @@ return Flickity;
       require('./flickity'),
       require('./drag'),
       require('./prev-next-button'),
+      require('./page-dots'),
       require('./player'),
       require('./add-remove-cell'),
       require('./lazyload')

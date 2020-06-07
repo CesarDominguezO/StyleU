@@ -12,7 +12,7 @@ body{
 	left: 0;
 	right: 0;
 	background-color: rgba(255, 188, 187, 1);
-	z-index: 5;
+	z-index: 6;
 
 }
 
@@ -143,19 +143,7 @@ input[type=text], input[type=submit] {
   box-sizing: border-box;
 }
 /* Style the submit button */
-input[type=submit] {
-  background-color: #3f3f40;
-  color: #f5f6f7;
-  border: none;
-  margin: 0;
-margin-left: -5px;
-  padding: 7px 10px;
-}
 
-input[type=submit]:hover {
-  background-color: #f5f6f7;
-    color: #3f3f40;
-}
 
 #correo{
     position: absolute;
@@ -179,41 +167,40 @@ input[type=submit]:hover {
     color: #3f3f40;
 }
 footer div #facebook{
-  background-image: url(../imagenes/Facebook.png);
-    	position: relative;
-	display: inline-block;
-	vertical-align: middle;
-	height: 60px;
-	width: 20px;
-	background-position: center;
-	background-repeat: no-repeat;
-	text-indent: -9999px;
-    background-size: 20px;
-    margin-right: 5px;
+  background-image: url(../imagenes/fb.png);
+        position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    height: 60px;
+    width: 36px;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    background-size: 34px;
 }
 footer div #twitter{
-   background-image: url(../imagenes/Twitter.png);
-    	position: relative;
-	display: inline-block;
-	vertical-align: middle;
-	height: 60px;
-	width: 40px;
-	background-position: center;
-	background-repeat: no-repeat;
-	text-indent: -9999px;
+   background-image: url(../imagenes/twitter.png);
+        position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    height: 60px;
+    width: 37px;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
     background-size: 40px;
 }
 footer div #insta{
-     background-image: url(../imagenes/Instagram.png);
-    	position: relative;
-	display: inline-block;
-	vertical-align: middle;
-	height: 60px;
-	width: 40px;
-	background-position: center;
-	background-repeat: no-repeat;
-	text-indent: -9999px;
-    background-size: 37px;
+     background-image: url(../imagenes/insta.png);
+        position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    height: 60px;
+    width: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    background-size: 40px;
 }
 #logsm a{
       display: block;
@@ -247,7 +234,6 @@ footer div #insta{
     padding: 50px;
     padding-bottom: 20px;
     padding-top: 120px;
-padding-right: 50%;
 }
 
 .background_container2{
@@ -291,7 +277,6 @@ padding-right: 50%;
     text-decoration: none;
     background-color: #b5ebec; 
     margin: 0;
-    margin-right: 31%;
 }
 
 .background_container #test:hover{
@@ -302,7 +287,6 @@ padding-right: 50%;
     text-decoration: none;
     background-color: #f5f6f7; 
     margin: 0;
-    margin-right: 31%;
 }
 
 #new{
@@ -374,11 +358,11 @@ padding-right: 50%;
 }
 
 #img{
-    background-image: url(../imagenes/vestido.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-    	text-indent: -9999px;
-    background-size: 800px;
+  background-image: url(https://data.whicdn.com/images/56493609/original.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+      text-indent: -9999px;
+  background-size: 800px;
 }
 
 
@@ -565,6 +549,35 @@ https://flickity.metafizzy.co
     width: 60%;
     height: 60%;
   }
+  
+  /* ---- page dots ---- */
+  
+  .flickity-page-dots {
+    position: absolute;
+    width: 100%;
+    bottom: -25px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    line-height: 1;
+  }
+  
+  .flickity-rtl .flickity-page-dots { direction: rtl; }
+  
+  .flickity-page-dots .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 8px;
+    background: #3f3f40;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .flickity-page-dots .dot.is-selected {
+    background: #b5ebec;
+  }
 
 /*Carousel2*/
 .carousel-wrap {
@@ -577,7 +590,7 @@ https://flickity.metafizzy.co
 /* fix blank or flashing items on carousel */
 .owl-carousel .item {
   position: relative;
-  z-index: 3;
+  z-index: 5;
 }
 
 /* end fix */
@@ -3738,7 +3751,7 @@ iframe {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/fondo-in-sesion.jpg);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/StyleU_bg_y_cosas-01.jpg);
 }
 
 
@@ -3867,14 +3880,14 @@ iframe {
   -moz-transition: all 0.4s;
   transition: all 0.4s;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .login100-form-btn::before {
   content: "";
   display: block;
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   width: 100%;
   height: 100%;
   border-radius: 5px;
@@ -3970,11 +3983,30 @@ iframe {
   }
 }
 
+/*maritzelll*/
+
+#picker > div {
+  background-color: #f5f6f7;
+}
+
+
+/*rommy*/
+    textarea {
+  outline: none;
+  border: none;
+}
+textarea.input100 {
+  min-height: 162px;
+  padding-top: 22px;
+  padding-bottom: 15px;
+}
+
+/*cesar*/
 #myBtn {
   display: none; /* Hidden by default */
   bottom: 20px; /* Place the button at the bottom of the page */
   right: 30px; /* Place the button 30px from the right */
-  z-index: 2; /* Make sure it does not overlap */
+  z-index: 3; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
   background-color: #FFBCBB; /* Set a background color */
@@ -3988,16 +4020,11 @@ iframe {
 
 #myBtn:hover {
   background-color: #555; /* Add a dark-grey background on hover */
-}
+} 
 
-textarea.input100 {
-  min-height: 162px;
-  padding-top: 22px;
-  padding-bottom: 15px;
+#boton{
+  background-color: rgba(255, 188, 187, 1) !important;
 }
-
-.nav-tabs .nav-link.active {
-  color: #f5f6f7;
-  background-color: #bf8c8c;
-  border-color: #bf8c8c;
+#boton:hover{
+background-color: #3f3f40 !important;
 }
